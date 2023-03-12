@@ -1,0 +1,15 @@
+
+button, .Button
+{
+  background: lightblue;
+
+  &:hover
+  {
+    background: lighten(lightblue, 10%);
+  }
+  &:active
+  {
+    background: darken(lightblue, 10%);
+  }
+}
+
