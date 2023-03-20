@@ -12,4 +12,183 @@
  * WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.
  * See the License for the specific language governing permissions and
  * limitations under the License.
- */
+//  */
+
+
+
+//  @import "style/style";
+
+
+//  @import "functions";
+// //  @import "variables";
+ 
+// //  @import "common/standard"; // Normalize Html Js Css Icon
+//  @import "common/layout";
+// //  @import "common/grid";
+// //  @import "common/form";
+ 
+// //  @import "component/navigation";
+//  @import "component/button";
+ 
+//  body
+//  {
+//    @extend .VLayout;
+ 
+//    box-shadow: 0 3em 1em 0 rgba(#000000, .12) inset;
+ 
+//    background: url("/5053309.jpg");
+//    background-size: cover;
+//  }
+ 
+//  #HEADER
+//  {
+//    @extend .HLayout;
+ 
+//    padding: 0em 3em;
+//    width: 100%;
+//    background: #000000;
+//    box-shadow: 0px 0px 2px 0px #000000;
+//    //position:relative;
+//    z-index: 1;
+ 
+//    .Brand
+//    {
+//      padding: .5em .5em;
+//      font-size: 2em;
+//      font-family: $title-family;
+//      font-weight: $title-weight;
+//      text-decoration: none;
+//      color: #99AAB5;
+//    }
+//  }
+ 
+//  #LOGO
+//  {
+//    height: 48px;
+//  }
+ 
+//  #NAVIGATION1
+//  {
+//    background-color: #111111;
+//    width: 64px;
+//    padding: 0px;
+ 
+//    img
+//    {
+//      width: 48px;
+//      padding: 4px 8px;
+//      border-radius: 50%;
+//    }
+//  }
+ 
+//  #NAVIGATION2
+//  {
+//    background-color: #212121;
+//    width: 200px;
+//    padding: 0px;
+//    a
+//    {
+//      font-size: 14px;
+//      padding: 4px 8px;
+//      &:hover
+//      {
+//        background-color: #282828;
+//      }
+//    }
+//  }
+ 
+//  #MAIN
+//  {
+//    flex: 1;
+//    background-color: #303030;
+//  }
+ 
+//  main
+//  {
+//    .LoginSpace
+//    {
+//      box-sizing: border-box;
+//      width: 512px;
+//      padding: 64px;
+ 
+//      margin: 0 auto;
+//      background: rgba(black, .75);
+//      //box-shadow: 0 4px 16px rgba(black, .12);
+//      border-radius: 2px;
+ 
+//      color: rgba(white, .5);
+ 
+//      hr
+//      {
+//        border-color: rgba(white, .12);
+//      }
+ 
+//      .LoginSpaceAction
+//      {
+//        @extend .HLayout;
+ 
+//        width: 100%;
+ 
+//        > a, > button, > img, > svg
+//        {
+//          flex: 1 1 auto;
+//          box-sizing: border-box;
+//          box-flex: 1;
+//          max-width:100%;
+ 
+//          font-size: 1.75em;
+//          padding: .5rem;
+ 
+//          &:not(:first-child)
+//          {
+//            margin-left: 1rem;
+//          }
+//        }
+ 
+//      }
+ 
+//      .LoginSpaceDownload
+//      {
+//        @extend .HLayout;
+ 
+//        align-items: center;
+//        justify-content: space-between;
+ 
+//        img
+//        {
+//          max-width: 192px;
+//        }
+//      }
+ 
+//    }
+//  }
+ 
+//  #FOOTER
+//  {
+//    @extend .HLayout;
+ 
+//    margin-top: auto;
+//    padding: .5em;
+//    background: rgba(black, 25%);
+ 
+//    a
+//    {
+//      display: inline-block;
+//      padding: .5em;
+//      color: rgba(white, 70%);
+ 
+//      &:first-child
+//      {
+//        margin-left: auto;
+//      }
+//    }
+//  }
+ 
+ 
+//  .FooterX
+//  {
+//    margin-top: auto;
+//    @extend .HLayout
+//  }
+ 
+ 

@@ -1,0 +1,89 @@
+.label-before {
+	line-height: 1rem;
+	font-size: 0.1rem;
+	top: -1.1rem;
+	background: #fff;
+	padding: 0 0.2rem;
+	left: 0.5rem;
+}
+
+.Container{
+    padding: 3.2rem 1.2rem 1.2rem 1.2rem ;
+}
+
+.field {
+	position: relative;
+	margin-bottom: 0.2rem;
+	label::before {
+		content: attr(title);
+		position: absolute;
+		top: 0;
+		left: 0.1rem;
+		line-height: 2rem;
+		font-size: 0.8rem;
+		color: #777;
+		transition: 300ms all;
+	}
+	.input {
+    width: 48%;
+    line-height: 1.3rem;
+    padding: 0 1.5rem;
+    box-sizing: border-box;
+    font-size: 0.5rem;
+    color: #222;
+    border: 0.1rem solid #ccc;
+    border-radius: 1.2rem ;
+		&:focus {
+			outline: 0;
+			border-color: blue;
+		}
+		&:valid + label::before {
+			@extend .label-before;
+			content: attr(data-title);
+		}
+		&:focus + label::before {
+			@extend .label-before;
+			color: blue;
+		}
+	}
+}
+
+.hover {
+
+    position: relative;
+    margin-bottom: 0.2rem;
+
+    &:hover{
+        border-color: whitesmoke;
+        width: 48%;
+    line-height: 1.3rem;
+    padding: 0 1.5rem;
+    box-sizing: border-box;
+    font-size: 0.5rem;
+    color: #222;
+    border: 0.1rem solid #ccc;
+    border-radius: 1.2rem ;
+    cursor: text;   
+    }
+}
+
+.active {
+
+    position: relative;
+    margin-bottom: 0.2rem;
+
+    &:hover:focus{
+        border-color: pink;
+        width: 48%;
+    line-height: 1.3rem;
+    padding: 0 1.5rem;
+    box-sizing: border-box;
+    font-size: 0.5rem;
+    color: #222;
+    border: 0.1rem solid #ccc;
+    border-radius: 1.2rem ;
+    cursor: text;   
+    @extend .label-before;
+    color: pink;
+    }
+}
