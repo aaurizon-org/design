@@ -13,14 +13,12 @@ div .navbar
     position: relative;
     z-index: 0;
     cursor: pointer;
-
     }
 }
 
 div.topBotomBordersOut{
 
     a{
-
         &::after{
             position: absolute;
             left: 0px;
@@ -37,6 +35,7 @@ div.topBotomBordersOut{
             bottom: 0px;
             transform: translateY(-10px);
         }
+
         &:hover::after{
             opacity: 1;
             transform: translateY(0px);
