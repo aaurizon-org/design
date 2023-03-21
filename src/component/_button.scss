@@ -25,7 +25,7 @@
   background: $bg;
   border-color: darken($bg,8%);
   &:hover {
-    box-shadow: 0 0 10px lighten($bg,8%)
+    background:darken($bg,25%);
   }
   &:active {
     background:darken($bg,25%);
@@ -67,8 +67,8 @@ button, .Button
     border-color: darken($button-color-main,8%);
   }
   
-  &:hover:not(.Btn-tertiary):not(.Btn-secondary) { 
-     box-shadow: 0 0 10px lighten($button-color-main,8%) ;
+  &:hover:not(.Btn-tertiary) { 
+    background:darken($button-color-main,25%);
   }
 
   &.Btn-secondary{ 
@@ -76,6 +76,7 @@ button, .Button
     color:  $button-color-text-black;
     &:hover{
       border-color: darken($button-color-main,25%);
+      color: #FFF;
     }
   }
 
@@ -83,6 +84,10 @@ button, .Button
     background-color: transparent;
     border: none;
     color: $button-color-text-black;
+    &:hover{
+     color:  $button-color-main;
+     ;
+    }
   }
 
   &.Btn-info {
