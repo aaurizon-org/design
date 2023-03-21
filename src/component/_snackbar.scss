@@ -1,62 +1,123 @@
-.snack-wrap {
+
+
+.snack-wrap {   
     display:block;
     position:fixed;
     bottom:0px;
-    left:50%;
-    transform: translate(-50%, 0%);
+    transform: translate(5%, 0%);
     padding:0px;
+
+    &.left{
+        transform: translate(5%, 0%)!important;
+    }
+    
+    &.right{
+        transform: translate(297%, 0%)!important;
+    }
+
+    &.centreL{
+        transform: translate(115%, 0%)!important;
+    }
+
+    &.centreR{
+        transform: translate(197%, 0%)!important;
+    }
+    >label {
+        z-index:11;
+        display:block;
+        width:100%;
+        height:100%;
+        color:rgba(255,255,255,0.8);
+        cursor:pointer;
+    }
+
+    .snackbar {
+        display:block;
+        background:goldenrod;
+        border:#f2f2f2;
+        border-radius: 10px;
+        padding:18px 32px;
+        color:#fff;
+        font-family:Arial;
+        position:relative;
+        left:0px;
+        bottom:-100px;
+        transition: bottom 0.5s ease-in-out;
+        z-index:9;
+    } 
+    
+    .snackclose, label {
+        bottom:-100px;
+        position:absolute;
+        border:0;
+    }
+    
+    .snackclose {
+        display:none;
+        z-index:10;
+    }
+    
+    .animated {
+        animation-name: snackbar-show;
+        animation-duration: 1s;
+        animation-direction: forwards;
+        animation-timing-function: ease-in-out;
+        animation-delay:1s;
+        animation-fill-mode: forwards;
+    }
+    
+    .snackclose:checked~.snackbar, .snackclose:checked, .snackclose:checked+label {
+        animation-name: snackbar-hide;
+        animation-delay:0s;
+    }
+    
+    @keyframes snackbar-show {
+        0%{ bottom:-100px; }
+        90%, 95% {bottom:15px; }
+        92.5%, 100% {bottom:10px; }
+    } 
+    
+    @keyframes snackbar-hide {
+        0%, 7.5% {bottom:10px; }
+        5%,10% {bottom:15px; }
+        100% {bottom:-100px; }
+    }
+
+    .info{
+        background: #031633;
+        color: #6ea8fe;
+        border: 1px solid #084298;
+        p::before{
+            content: "";
+        }
+        left: 0;
+    }
+    
+    .danger{
+        background: #2c0b0e;
+        color: #ea868f;
+        border: 1px solid #842029;
+        p::before{
+            content: "";
+        }
+    }
+    
+    .success{
+        background: #051b11;
+        color: #75b798;
+        border: 1px solid #0f5132;
+        p::before{
+            content: "";
+        }
+    }
+
+    .warning{
+        background: #332701;
+        color: #ffda6a;
+        border: 1px solid #664d03;
+        p::before{
+            content: "";
+        }
+    }
 }
   
-.snackbar {
-    display:block;
-    background:goldenrod;
-    border:#f2f2f2;
-    border-radius: 10px;
-    padding:10px 40px 10px 20px;
-    color:#fff;
-    font-family:Arial;
-    position:relative;
-    left:0px;
-    bottom:-70px;
-    transition: bottom 0.5s ease-in-out;
-    z-index:9;
-} 
-.snackclose, label {
-    bottom:-70px;
-    position:absolute;
-    border:0;
-}
-.snackclose {
-    display:none;
-    z-index:10;
-}
-label {
-    z-index:11;
-    display:block;
-    width:100%;
-    height:100%;
-    color:rgba(255,255,255,0.8);
-    cursor:pointer;
-}
-.animated {
-    animation-name: snackbar-show;
-    animation-duration: 1s;
-    animation-direction: forwards;
-    animation-timing-function: ease-in-out;
-    animation-delay:1s;
-    animation-fill-mode: forwards;
-}
-.snackclose:checked~.snackbar, .snackclose:checked, .snackclose:checked+label {
-    animation-name: snackbar-hide;
-    animation-delay:0s;
-}
-@keyframes snackbar-show {
-    0%{ bottom:-70px; }
-    90%, 95% {bottom:15px; }
-    92.5%, 100% {bottom:10px; }
-} 
-@keyframes snackbar-hide {
-    0%, 7.5% {bottom:10px; }
-    5%,10% {bottom:15px; }
-    100% {bottom:-70px; }
-}
