@@ -32,6 +32,23 @@ div .navbar
             margin: 0;
             padding: 0;
             display: none;
+
+             a:before{
+                position: absolute;
+                width: 2px;
+                height: 100%;
+                top: 0px;
+                left: 0px;
+                content: '';
+                background: #FFF;
+                opacity: 0.3;
+                transition: all 0.3s;
+            }
+            
+            a:hover:before
+            {
+                width: 100%;
+            }
         }
     } 
 }
