@@ -1,0 +1,19 @@
+body,.Container{
+    background-color: whitesmoke;
+}
+
+.headerDivider1 {
+    border-left:0.1rem solid #38546d;
+    height:48rem;
+    left:100%;
+    top:10px;
+    position: relative;
+}
+
+.headerDivider2 {
+        border-left:0.1rem solid #16222c;
+        height:48rem;
+        left:0%;
+        top:10px;
+        position: relative;
+    }
