@@ -84,9 +84,9 @@
     }
 
     .info{
-        background: #031633;
-        color: #6ea8fe;
-        border: 1px solid #084298;
+        background: #cfe2ff;
+        color: #0a58ca;
+        border: 1px solid #9ec5fe;
         p::before{
             content: "";
         }
@@ -94,27 +94,27 @@
     }
     
     .danger{
-        background: #2c0b0e;
-        color: #ea868f;
-        border: 1px solid #842029;
+        background: #f8d7da;
+        color: #b02a37;
+        border: 1px solid #f1aeb5;
         p::before{
             content: "";
         }
     }
     
     .success{
-        background: #051b11;
-        color: #75b798;
-        border: 1px solid #0f5132;
+        background: #d1e7dd;
+        color: #146c43;
+        border: 1px solid #a3cfbb;
         p::before{
             content: "";
         }
     }
 
     .warning{
-        background: #332701;
-        color: #ffda6a;
-        border: 1px solid #664d03;
+        background: #fff3cd;
+        color: #997404;
+        border: 1px solid #ffe69c;
         p::before{
             content: "";
         }
