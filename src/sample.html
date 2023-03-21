@@ -60,7 +60,35 @@
 <div>
     <input type="submit" value="?" id="submit"/>
 </div>
-	
+
+
+<div style="display: flex; flex-direction: column;">
+	<div class="inputLabel">
+		<label for="name" class="label">Label</label>
+	</div>
+	<div style="width:600px;    display: flex;flex-wrap: wrap;align-items: stretch;">
+		<input type="text" id="name" name="name" required
+	minlength="4" maxlength="8" size="10" placeholder="placeholder"  class="input">
+	</div>
+	<div class="inputLabel">
+		<label for="name" class="label">Label error</label>
+	</div>
+	<div style="width:600px;    display: flex;flex-wrap: wrap;align-items: stretch;">
+		<input type="text" id="name" name="name" required
+	minlength="4" maxlength="8" size="10" placeholder="placeholder"  class="input error">
+	</div>
+
+
+</div>
+
+
+<div style="width:600px; display: flex;flex-wrap: wrap;align-items: stretch;flex-direction: column;">
+	<label for="name" class=" inputLabel">Label SUCCESS</label>
+	<input type="text" id="name" name="name" required
+minlength="4" maxlength="8" size="10" placeholder="placeholder"  class="input success">
+</div>	
+
+
 </div>
     
 </main>
