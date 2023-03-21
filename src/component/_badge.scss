@@ -1,0 +1,89 @@
+@mixin margin-auto {
+	top: 0;
+	left: 0;
+	right: 0;
+	bottom: 0;
+	margin: auto;
+}
+
+.badge-wrapper {
+	width: 90%;
+	max-width: 900px;
+	margin: 48px auto;
+	text-align: center;
+
+    .badge {
+        position: relative;
+        width: 64px;
+        height: 33px;
+        border-radius: 10px;
+        display: inline-block;
+        top: 0;
+        transition: all 0.2s ease;
+        &:before,
+        &:after {
+            position: absolute;
+            width: inherit;
+            height: inherit;
+            border-radius: inherit;
+            background: inherit;
+            content: "";
+            @include margin-auto;
+        }
+
+        &:before {
+            transform: rotate(60deg);
+        }
+        
+        &:after {
+            transform: rotate(-60deg);
+        }
+
+        &:hover {
+            top: -4px;
+        }
+        
+        .circle {
+            width: 30px;
+            height: 30px;
+            position: absolute;
+            background: #fff;
+            z-index: 10;
+            border-radius: 50%;
+            @include margin-auto;
+        }
+    }
+
+    .orange{
+        background: linear-gradient(to bottom right, #ffc107 0%, #f57c00 100%);
+        color: #f68401;
+    }
+    
+    .blue{
+        background: linear-gradient(to bottom right, #1976d2 0%, #283593 100%);
+        color: #1c68c5;
+    }
+    
+    .green{
+        background: linear-gradient(to bottom right, #cddc39 0%, #8bc34a 100%);
+        color: #7cb342;
+    }
+    
+}
+
+
+
+.orange {
+	background: linear-gradient(to bottom right, #ffc107 0%, #f57c00 100%);
+	color: #f68401;
+}
+
+.blue-dark {
+	background: linear-gradient(to bottom right, #1976d2 0%, #283593 100%);
+	color: #1c68c5;
+}
+
+.green {
+	background: linear-gradient(to bottom right, #cddc39 0%, #8bc34a 100%);
+	color: #7cb342;
+}
