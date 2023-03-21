@@ -14,17 +14,93 @@
  * limitations under the License.
  */
 
-button, .Button,
-{
-  background: lightblue;
-
-  &:hover
-  {
-    background: lighten(lightblue, 10%);
+ $button-color-text-white: #FFF!default;
+ $button-color-text-black: black !default;
+ $button-family: serif !default;
+ $button-weight: 500 !default;
+ $button-height: normal !default;
+ $button-color-main:rgb(150, 140, 146)!default;
+ 
+ @mixin button-bg($bg) {
+  background: $bg;
+  border-color: darken($bg,8%);
+  &:hover {
+    background:darken($bg,25%);
   }
-  &:active
-  {
-    background: darken(lightblue, 10%);
+  &:active {
+    background:darken($bg,25%);
+  }   
+  &:focus {
+    border-color: darken($bg,25%);
+  } 
+}
+
+
+button, .Button
+{
+  font-family: 'Roboto', sans-serif!important;
+  display: inline-block;
+  background: $button-color-main;
+  color: $button-color-text-white;
+  text-transform: uppercase;
+  font-family: $button-family;
+  line-height: $button-height;
+  transition: 1s;
+  text-align: center;
+  text-decoration: none;
+  outline: none;
+
+  border: 1px solid $button-color-main;
+  box-sizing: border-box;  
+  //effect
+
+  padding-left: 32px;
+  padding-right: 32px;
+  padding-top: 18px;
+  padding-bottom: 18px;
+  margin: 1em;
+  width: 220px;
+  cursor: pointer;
+
+
+  &:focus { 
+    border-color: darken($button-color-main,8%);
+  }
+  
+  &:hover:not(.Btn-tertiary) { 
+    background:darken($button-color-main,25%);
+  }
+
+  &.Btn-secondary{ 
+    background-color: transparent;
+    color:  $button-color-text-black;
+    &:hover{
+      border-color: darken($button-color-main,25%);
+      color: #FFF;
+    }
+  }
+
+  &.Btn-tertiary{ 
+    background-color: transparent;
+    border: none;
+    color: $button-color-text-black;
+    &:hover{
+     color:  $button-color-main;
+     ;
+    }
+  }
+
+  &.Btn-info {
+      @include button-bg(rgb(54, 189, 230));
+  }
+  &.Btn-sucess{
+    @include button-bg(rgb(17, 245, 112));
+  }
+  &.Btn-warning{
+    @include button-bg(orange);
+  }
+  &.Btn-Danger{
+    @include button-bg(red);
   }
 }
 

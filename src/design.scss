@@ -37,6 +37,8 @@
 // Component
 @import "component/button";
 @import "component/checkbox";
+@import "component/input-text.scss";
+@import "component/radio-button";
 //@import "component/accordion";
 //@import "component/alerts";
 //@import "component/badge";
@@ -52,7 +54,7 @@
 //@import "component/modal";
 //@import "component/navbar";
 //@import "component/navs";
-//@import "component/tabs";
+@import "component/tabs";
 //@import "component/offcanvas";
 //@import "component/pagination";
 //@import "component/placeholders";
