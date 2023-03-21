@@ -1,5 +1,5 @@
 $background-color:white;
-$color-inputlabel:grey;
+$color-inputLabel:grey;
 $color: #212529;
 $border-color: #dee2e6;
 $box-shadow:0 0 10px lighten(#b093ff,8%);
@@ -10,7 +10,7 @@ $border-color-focus:#b093ff;
 
 .inputLabel{
     padding-bottom: 18px;
-    color: $color-inputlabel;
+    color: $color-inputLabel;
 }
 
 .input{
@@ -38,6 +38,3 @@ $border-color-focus:#b093ff;
         border-color: $border-color-success;
     }
 }
-
-
-
