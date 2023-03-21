@@ -9,7 +9,7 @@ $border-color-focus:#b093ff;
 
 
 .inputLabel{
-    padding-bottom: 18px;
+    padding-bottom: 8px;
     color: $color-inputLabel;
 }
 
@@ -23,7 +23,7 @@ $border-color-focus:#b093ff;
     overflow:visible;
     color: $color;
     background-color: $background-color;
-
+    margin-bottom: 32px;
     &:focus {
         color: $color;
         background-color: $background-color;

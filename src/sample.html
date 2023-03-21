@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta charset="utf-8" />
+  <meta name="description" content="Sample of style library." />
+  <script src="https://kit.fontawesome.com/53ad689935.js" crossorigin="anonymous"></script>
+  <title>Sample</title>
+  <link rel="preconnect" href="https://fonts.gstatic.com">
+  <link rel="stylesheet"
+    href="https://fonts.googleapis.com/css2?family=Open+Sans:wght@300;400;700&family=Roboto:wght@300;400;500;700&display=swap">
+  <link rel="stylesheet" href="design.css" />
+  <style>
+  </style>
+</head>
+<body>
+
+  <header id="HEADER">
+    <a href="/" class="Brand">Sample</a>
+    <hr class="Spacer" />
+  </header>
+  <div>
+    <div class="navbar topBotomBordersOut">
+      <a>HOME</a>
+      <a>ARTICLES</a>
+      <a>PORTFOLIO</a>
+      <a>ABOUT</a>
+      <a>CONTACT</a>
+    </div>
+</div>
+
+<div class="h-divider">
+  <div class="shadow"></div>
+</div>
+
+<div class="snack-wrap">
+  <input type="checkbox" class="snackclose animated" id="close"/>
+  <label class="snacklable animated" for="close">
+  </label>  
+  <div class="snackbar animated">
+      <p><strong>Snackbar</strong> Cliquer ici pour retirer la snackbar</p>
+  </div>
+</div>  
+
+  <main class="Container VLayout">
+
+      <label for="name" class=" inputLabel">Label </label>
+      <input type="text" id="name" name="name" placeholder="placeholder"  class="input ">
+    
+    <!-- label + text input success -->
+    <label for="name" class=" inputLabel">Label SUCCESS</label>
+    <input type="text" id="name" name="name" placeholder="placeholder"  class="input success">
+    
+    <!-- label + text input error -->
+    
+    <label for="name" class=" inputLabel">Label error</label>
+    <input type="text" id="name" name="name"  placeholder="placeholder"  class="input error">
+
+
+
+  <footer id="FOOTER">
+    <a href="/privacy" title="Privacy Policy" fr="Confidentialité">Privacy Policy</a>
+    <a href="/terms" title="Terms of Service" fr="Conditions">Terms of Service</a>
+  </footer>
+
+  <script src="style.js"></script>
+</body>
+
+</html>
