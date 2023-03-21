@@ -14,23 +14,18 @@
  * limitations under the License.
  */
 
- $button-color-border:rgb(151, 15, 99)!default;
- $button-color-text: #FFF!default;
- $button-size: 1em!default;
+ $button-color-text-white: #FFF!default;
+ $button-color-text-black: black !default;
  $button-family: serif !default;
  $button-weight: 500 !default;
  $button-height: normal !default;
- $button-color-background:rgb(247, 11, 156)!default;
- $background: #23272A;
- $button-color: #7289DA;
- $primary-color: #7289DA;
- $accent-color: #FFFFFF;
+ $button-color-main:rgb(150, 140, 146)!default;
  
  @mixin button-bg($bg) {
   background: $bg;
   border-color: darken($bg,8%);
   &:hover {
-    box-shadow: 0 0 10px darken($bg,8%)
+    box-shadow: 0 0 10px lighten($bg,8%)
   }
   &:active {
     background:darken($bg,25%);
@@ -43,20 +38,19 @@
 
 button, .Button
 {
+  font-family: 'Roboto', sans-serif!important;
   display: inline-block;
-  background: $button-color-background;
-  color: $button-color-text;
+  background: $button-color-main;
+  color: $button-color-text-white;
   text-transform: uppercase;
   font-family: $button-family;
-  font-size: $button-size;
   line-height: $button-height;
   transition: 1s;
   text-align: center;
   text-decoration: none;
   outline: none;
 
-  border: 1px solid $button-color-border;
-  border-radius: none;
+  border: 1px solid $button-color-main;
   box-sizing: border-box;  
   //effect
 
@@ -68,23 +62,27 @@ button, .Button
   width: 220px;
   cursor: pointer;
 
+
   &:focus { 
-    border-color: rgb(0, 248, 207);
+    border-color: darken($button-color-main,8%);
   }
   
-  &:hover:not(.Btn-tertiary) { 
-    box-shadow: 0 0 10px rgb(253, 5, 212);
+  &:hover:not(.Btn-tertiary):not(.Btn-secondary) { 
+     box-shadow: 0 0 10px lighten($button-color-main,8%) ;
   }
-
 
   &.Btn-secondary{ 
     background-color: transparent;
-    color:rgb(253, 5, 212);
+    color:  $button-color-text-black;
+    &:hover{
+      border-color: darken($button-color-main,25%);
+    }
   }
+
   &.Btn-tertiary{ 
     background-color: transparent;
     border: none;
-    color:rgb(253, 5, 212);
+    color: $button-color-text-black;
   }
 
   &.Btn-info {
