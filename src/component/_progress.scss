@@ -1,0 +1,115 @@
+//variable color
+$color-max:#f674a4;
+$color-maxBis:#e06995;
+$color-done:#e1ddd9;
+$color-doneBis:#e9e5e2;
+$color-start:#66b3cc;
+$color-startBis:#5da3ba;
+$color-center:#a1ce5b;
+$color-centerBis:#91ba52;
+$color-end:#f0bb4b;
+$color-endBis:#d9aa44;
+$color-border:#bebbb9;
+$color-borderBis:#fcfcfc;
+
+.progressBox{ 
+	list-style: none;
+	font: 12px "Helvetica Neue", Arial, Helvetica, Geneva, sans-serif;
+	width: 296px;
+	margin: 50px auto 0;
+	position: relative;
+	line-height: 2em;
+	padding: 30px 0;
+    li {
+        margin-bottom:50px; 
+        background:$color-doneBis;
+        background-image: -webkit-gradient(linear, left top, left bottom, from($color-done), to($color-doneBis));
+        background-image: -webkit-linear-gradient(top,$color-done , $color-doneBis);
+        background-image: -moz-linear-gradient(top,$color-done, $color-doneBis);
+        background-image: -ms-linear-gradient(top, $color-done, $color-doneBis);
+        background-image: -o-linear-gradient(top, $color-done, $color-doneBis);
+        background-image: linear-gradient(top, $color-done, $color-doneBis);  
+        height:20px; 
+        border-radius:10px; 
+        -moz-box-shadow: 0 1px 0px $color-border inset, 0 1px 0 $color-borderBis;	 
+        -webkit-box-shadow: 0 1px 0px $color-border inset, 0 1px 0 $color-borderBis;	 
+        box-shadow: 0 1px 0px $color-border inset, 0 1px 0 $color-borderBis;
+
+        .progress{
+            position:relative; 
+            top:-25px;
+        }
+    }
+}
+
+.bar { 
+	height:18px; 
+	margin:1px 2px;  
+	position:absolute;
+	border-radius:10px;
+	-moz-box-shadow: 0 1px 0px $color-borderBis inset, 0 1px 0 $color-border;
+	-webkit-box-shadow: 0 1px 0px $color-borderBis inset, 0 1px 0 $color-border;	 
+	box-shadow: 0 1px 0px $color-borderBis inset, 0 1px 0 $color-border;		
+}
+
+.max {
+	width:100%; 
+	-moz-animation:graphic-design 2s ease-out;
+	-webkit-animation:graphic-design 2s ease-out;
+	background-color: $color-max;
+	background-image: -webkit-gradient(linear, left top, left bottom, from($color-max), to($color-maxBis));
+	background-image: -webkit-linear-gradient(top, $color-max, $color-maxBis);
+	background-image: -moz-linear-gradient(top, $color-max, $color-maxBis);
+	background-image: -ms-linear-gradient(top, $color-max, $color-maxBis);
+	background-image: -o-linear-gradient(top, $color-max, $color-maxBis);
+	background-image: linear-gradient(top, $color-max, $color-maxBis);
+}
+
+.end{
+	width:80%;
+	-moz-animation:html-css 2s ease-out;
+	-webkit-animation:html-css 2s ease-out;
+	background-color: $color-end;
+	background-image: -webkit-gradient(linear, left top, left bottom, from($color-end), to($color-endBis));
+	background-image: -webkit-linear-gradient(top, $color-end, $color-endBis);
+	background-image: -moz-linear-gradient(top, $color-end, $color-endBis);
+	background-image: -ms-linear-gradient(top, $color-end, $color-endBis);
+	background-image: -o-linear-gradient(top, $color-end, $color-endBis);
+	background-image: linear-gradient(top, $color-end, $color-endBis);
+}
+
+.center{
+	width:50%;
+	-moz-animation:jquery 2s ease-out;
+	-webkit-animation:jquery 2s ease-out;
+	background-color: $color-center;
+	background-image: -webkit-gradient(linear, left top, left bottom, from($color-center), to($color-centerBis));
+	background-image: -webkit-linear-gradient(top, $color-center, $color-centerBis);
+	background-image: -moz-linear-gradient(top, $color-center, $color-centerBis);
+	background-image: -ms-linear-gradient(top, $color-center, $color-centerBis);
+	background-image: -o-linear-gradient(top, $color-center, $color-centerBis);
+	background-image: linear-gradient(top, $color-center, $color-centerBis);
+}
+
+.start{
+	width:20%;
+	-moz-animation:wordpress 2s ease-out;
+	-webkit-animation:wordpress 2s ease-out;
+	background-color: $color-start;
+	background-image: -webkit-gradient(linear, left top, left bottom, from($color-start), to($color-startBis));
+	background-image: -webkit-linear-gradient(top, $color-start, $color-startBis);
+	background-image: -moz-linear-gradient(top, $color-start, $color-startBis);
+	background-image: -ms-linear-gradient(top, $color-start, $color-startBis);
+	background-image: -o-linear-gradient(top, $color-start, $color-startBis);
+	background-image: linear-gradient(top, $color-start, $color-startBis)	
+}
+
+@-moz-keyframes max {0%  { width:0px;} 100%{ width:100%;}  }
+@-moz-keyframes end        { 0%  { width:0px;} 100%{ width:90%;}  }
+@-moz-keyframes center      { 0%  { width:0px;} 100%{ width:65%;}  }
+@-moz-keyframes start   { 0%  { width:0px;} 100%{ width:80%;}  }
+
+@-webkit-keyframes max       { 0%  { width:0px;} 100%{ width:100%;}  }
+@-webkit-keyframes end       { 0%  { width:0px;} 100%{ width:90%;}  }
+@-webkit-keyframes center    { 0%  { width:0px;} 100%{ width:65%;}  }
+@-webkit-keyframes start   { 0%  { width:0px;} 100%{ width:80%;}  }
