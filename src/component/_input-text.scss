@@ -1,0 +1,40 @@
+$background-color:white;
+$color-inputLabel:grey;
+$color: #212529;
+$border-color: #dee2e6;
+$box-shadow:0 0 10px lighten(#b093ff,8%);
+$border-color-error: rgb(168, 18, 18);
+$border-color-success:  rgb(7, 189, 53);
+$border-color-focus:#b093ff;
+
+
+.inputLabel{
+    padding-bottom: 8px;
+    color: $color-inputLabel;
+}
+
+.input{
+    border: 1px solid $border-color;
+    border-radius:5px ;
+    padding: 0.375rem 0.75rem;
+    font-size: 1rem;
+    font-weight:400;
+    line-height:1.5;
+    overflow:visible;
+    color: $color;
+    background-color: $background-color;
+    margin-bottom: 32px;
+    &:focus {
+        color: $color;
+        background-color: $background-color;
+        border-color: $border-color-focus;
+        outline:0;
+        box-shadow: $box-shadow;    
+    }
+    &.error{
+        border-color: $border-color-error;
+    }
+    &.success{
+        border-color: $border-color-success;
+    }
+}
