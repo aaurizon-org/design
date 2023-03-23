@@ -1,3 +1,60 @@
+// @keyframes progress-bar-stripes {
+// 	0% {
+// 	  background-position-x: 1rem;
+// 	}
+//   }
+//   .progress {
+// 	--bs-progress-height: 1rem;
+// 	--bs-progress-font-size: 0.75rem;
+// 	--bs-progress-bg: #e9ecef;
+// 	--bs-progress-border-radius: 0.375rem;
+// 	--bs-progress-box-shadow: inset 0 1px 2px rgba(0, 0, 0, 0.075);
+// 	--bs-progress-bar-color: #fff;
+// 	--bs-progress-bar-bg: #0d6efd;
+// 	--bs-progress-bar-transition: width 0.6s ease;
+// 	display: flex;
+// 	height: var(--bs-progress-height);
+// 	overflow: hidden;
+// 	font-size: var(--bs-progress-font-size);
+// 	background-color: var(--bs-progress-bg);
+// 	border-radius: var(--bs-progress-border-radius);
+//   }
+  
+//   .progress-bar {
+// 	display: flex;
+// 	flex-direction: column;
+// 	justify-content: center;
+// 	overflow: hidden;
+// 	color: var(--bs-progress-bar-color);
+// 	text-align: center;
+// 	white-space: nowrap;
+// 	background-color: var(--bs-progress-bar-bg);
+// 	transition: var(--bs-progress-bar-transition);
+//   }
+//   @media (prefers-reduced-motion: reduce) {
+// 	.progress-bar {
+// 	  transition: none;
+// 	}
+//   }
+  
+//   .progress-bar-striped {
+// 	background-image: linear-gradient(45deg, rgba(255, 255, 255, 0.15) 25%, transparent 25%, transparent 50%, rgba(255, 255, 255, 0.15) 50%, rgba(255, 255, 255, 0.15) 75%, transparent 75%, transparent);
+// 	background-size: var(--bs-progress-height) var(--bs-progress-height);
+//   }
+  
+//   .progress-bar-animated {
+// 	animation: 1s linear infinite progress-bar-stripes;
+//   }
+//   @media (prefers-reduced-motion: reduce) {
+// 	.progress-bar-animated {
+// 	  animation: none;
+// 	}
+//   }
+
+
+
+
+
 //variable color
 $color-max:#f674a4;
 $color-maxBis:#e06995;
@@ -12,9 +69,23 @@ $color-endBis:#d9aa44;
 $color-border:#bebbb9;
 $color-borderBis:#fcfcfc;
 
+
+@mixin progress-pourcentage($pourcentage:100%,$color-end,$color-endBis) {
+	width:$pourcentage;
+
+	background-color: $color-end;
+	background-image: -webkit-gradient(linear, left top, left bottom, from($color-end), to($color-endBis));
+	background-image: -webkit-linear-gradient(top, $color-end, $color-endBis);
+	background-image: -moz-linear-gradient(top, $color-end, $color-endBis);
+	background-image: -ms-linear-gradient(top, $color-end, $color-endBis);
+	background-image: -o-linear-gradient(top, $color-end, $color-endBis);
+	background-image: linear-gradient(top, $color-end, $color-endBis);
+	-moz-animation:html-css 2s ease-out;
+	-webkit-animation:html-css 2s ease-out;
+  }
+  
 .progressBox{ 
 	list-style: none;
-	font: 12px "Helvetica Neue", Arial, Helvetica, Geneva, sans-serif;
 	width: 296px;
 	margin: 50px auto 0;
 	position: relative;
@@ -23,17 +94,18 @@ $color-borderBis:#fcfcfc;
     li {
         margin-bottom:50px; 
         background:$color-doneBis;
-        background-image: -webkit-gradient(linear, left top, left bottom, from($color-done), to($color-doneBis));
-        background-image: -webkit-linear-gradient(top,$color-done , $color-doneBis);
-        background-image: -moz-linear-gradient(top,$color-done, $color-doneBis);
-        background-image: -ms-linear-gradient(top, $color-done, $color-doneBis);
-        background-image: -o-linear-gradient(top, $color-done, $color-doneBis);
-        background-image: linear-gradient(top, $color-done, $color-doneBis);  
+        // background-image: -webkit-gradient(linear, left top, left bottom, from($color-done), to($color-doneBis));
+        // background-image: -webkit-linear-gradient(top,$color-done , $color-doneBis);
+        // background-image: -moz-linear-gradient(top,$color-done, $color-doneBis);
+        // background-image: -ms-linear-gradient(top, $color-done, $color-doneBis);
+        // background-image: -o-linear-gradient(top, $color-done, $color-doneBis);
+        // background-image: linear-gradient(top, $color-done, $color-doneBis);  
+        // -moz-box-shadow: 0 1px 0px $color-border inset, 0 1px 0 $color-borderBis;	 
+        // -webkit-box-shadow: 0 1px 0px $color-border inset, 0 1px 0 $color-borderBis;
+		@include progress-pourcentage('',$color-done,$color-doneBis);
+
         height:20px; 
         border-radius:10px; 
-        -moz-box-shadow: 0 1px 0px $color-border inset, 0 1px 0 $color-borderBis;	 
-        -webkit-box-shadow: 0 1px 0px $color-border inset, 0 1px 0 $color-borderBis;	 
-        box-shadow: 0 1px 0px $color-border inset, 0 1px 0 $color-borderBis;
 
         .progress{
             position:relative; 
@@ -44,7 +116,6 @@ $color-borderBis:#fcfcfc;
 
 .bar { 
 	height:18px; 
-	margin:1px 2px;  
 	position:absolute;
 	border-radius:10px;
 	-moz-box-shadow: 0 1px 0px $color-borderBis inset, 0 1px 0 $color-border;
@@ -53,55 +124,19 @@ $color-borderBis:#fcfcfc;
 }
 
 .max {
-	width:100%; 
-	-moz-animation:graphic-design 2s ease-out;
-	-webkit-animation:graphic-design 2s ease-out;
-	background-color: $color-max;
-	background-image: -webkit-gradient(linear, left top, left bottom, from($color-max), to($color-maxBis));
-	background-image: -webkit-linear-gradient(top, $color-max, $color-maxBis);
-	background-image: -moz-linear-gradient(top, $color-max, $color-maxBis);
-	background-image: -ms-linear-gradient(top, $color-max, $color-maxBis);
-	background-image: -o-linear-gradient(top, $color-max, $color-maxBis);
-	background-image: linear-gradient(top, $color-max, $color-maxBis);
+    @include progress-pourcentage(100%,$color-max,$color-maxBis);
 }
 
 .end{
-	width:80%;
-	-moz-animation:html-css 2s ease-out;
-	-webkit-animation:html-css 2s ease-out;
-	background-color: $color-end;
-	background-image: -webkit-gradient(linear, left top, left bottom, from($color-end), to($color-endBis));
-	background-image: -webkit-linear-gradient(top, $color-end, $color-endBis);
-	background-image: -moz-linear-gradient(top, $color-end, $color-endBis);
-	background-image: -ms-linear-gradient(top, $color-end, $color-endBis);
-	background-image: -o-linear-gradient(top, $color-end, $color-endBis);
-	background-image: linear-gradient(top, $color-end, $color-endBis);
+    @include progress-pourcentage(80%,$color-end,$color-endBis);
 }
 
 .center{
-	width:50%;
-	-moz-animation:jquery 2s ease-out;
-	-webkit-animation:jquery 2s ease-out;
-	background-color: $color-center;
-	background-image: -webkit-gradient(linear, left top, left bottom, from($color-center), to($color-centerBis));
-	background-image: -webkit-linear-gradient(top, $color-center, $color-centerBis);
-	background-image: -moz-linear-gradient(top, $color-center, $color-centerBis);
-	background-image: -ms-linear-gradient(top, $color-center, $color-centerBis);
-	background-image: -o-linear-gradient(top, $color-center, $color-centerBis);
-	background-image: linear-gradient(top, $color-center, $color-centerBis);
+    @include progress-pourcentage(50%,$color-center,$color-centerBis);
 }
 
 .start{
-	width:20%;
-	-moz-animation:wordpress 2s ease-out;
-	-webkit-animation:wordpress 2s ease-out;
-	background-color: $color-start;
-	background-image: -webkit-gradient(linear, left top, left bottom, from($color-start), to($color-startBis));
-	background-image: -webkit-linear-gradient(top, $color-start, $color-startBis);
-	background-image: -moz-linear-gradient(top, $color-start, $color-startBis);
-	background-image: -ms-linear-gradient(top, $color-start, $color-startBis);
-	background-image: -o-linear-gradient(top, $color-start, $color-startBis);
-	background-image: linear-gradient(top, $color-start, $color-startBis)	
+    @include progress-pourcentage(20%,$color-start,$color-startBis);
 }
 
 @-moz-keyframes max {0%  { width:0px;} 100%{ width:100%;}  }
