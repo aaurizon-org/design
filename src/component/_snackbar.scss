@@ -1,0 +1,123 @@
+
+
+.snack-wrap {   
+    display:block;
+    position:fixed;
+    bottom:0px;
+    transform: translate(5%, 0%);
+    padding:0px;
+
+    &.left{
+        transform: translate(5%, 0%)!important;
+    }
+    
+    &.right{
+        transform: translate(297%, 0%)!important;
+    }
+
+    &.centreL{
+        transform: translate(115%, 0%)!important;
+    }
+
+    &.centreR{
+        transform: translate(197%, 0%)!important;
+    }
+    >label {
+        z-index:11;
+        display:block;
+        width:100%;
+        height:100%;
+        color:rgba(255,255,255,0.8);
+        cursor:pointer;
+    }
+
+    .snackbar {
+        display:block;
+        background:goldenrod;
+        border:#f2f2f2;
+        border-radius: 10px;
+        padding:18px 32px;
+        color:#fff;
+        font-family:Arial;
+        position:relative;
+        left:0px;
+        bottom:-100px;
+        transition: bottom 0.5s ease-in-out;
+        z-index:9;
+    } 
+    
+    .snackclose, label {
+        bottom:-100px;
+        position:absolute;
+        border:0;
+    }
+    
+    .snackclose {
+        display:none;
+        z-index:10;
+    }
+    
+    .animated {
+        animation-name: snackbar-show;
+        animation-duration: 1s;
+        animation-direction: forwards;
+        animation-timing-function: ease-in-out;
+        animation-delay:1s;
+        animation-fill-mode: forwards;
+    }
+    
+    .snackclose:checked~.snackbar, .snackclose:checked, .snackclose:checked+label {
+        animation-name: snackbar-hide;
+        animation-delay:0s;
+    }
+    
+    @keyframes snackbar-show {
+        0%{ bottom:-100px; }
+        90%, 95% {bottom:15px; }
+        92.5%, 100% {bottom:10px; }
+    } 
+    
+    @keyframes snackbar-hide {
+        0%, 7.5% {bottom:10px; }
+        5%,10% {bottom:15px; }
+        100% {bottom:-100px; }
+    }
+
+    .info{
+        background: #cfe2ff;
+        color: #0a58ca;
+        border: 1px solid #9ec5fe;
+        p::before{
+            content: "";
+        }
+        left: 0;
+    }
+    
+    .danger{
+        background: #f8d7da;
+        color: #b02a37;
+        border: 1px solid #f1aeb5;
+        p::before{
+            content: "";
+        }
+    }
+    
+    .success{
+        background: #d1e7dd;
+        color: #146c43;
+        border: 1px solid #a3cfbb;
+        p::before{
+            content: "";
+        }
+    }
+
+    .warning{
+        background: #fff3cd;
+        color: #997404;
+        border: 1px solid #ffe69c;
+        p::before{
+            content: "";
+        }
+    }
+}
+  

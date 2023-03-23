@@ -34,32 +34,40 @@
 //@import "common/grid";
 //@import "common/table";
 
+@import "utilities/color";
+
 // Component
 @import "component/button";
+@import "component/divider";
+@import "component/checkbox";
+@import "component/input-text.scss";
 @import "component/radio-button";
-//@import "component/accordion";
+@import "component/snackbar";
+@import "component/accordion";
 //@import "component/alerts";
 //@import "component/badge";
+@import "component/breadcrumb";
+@import "component/badge";
 //@import "component/breadcrumb";
 //@import "component/cuttons";
 //@import "component/cutton group";
-//@import "component/card";
-//@import "component/carousel";
+@import "component/carousel";
+@import "component/card";
 //@import "component/close button";
 //@import "component/collapse";
 //@import "component/dropdowns";
-//@import "component/list group";
 @import "component/modal";
-//@import "component/navbar";
+@import "component/list-group";
+@import "component/navbar";
+
 //@import "component/navs";
-//@import "component/tabs";
+@import "component/tabs";
 //@import "component/offcanvas";
 //@import "component/pagination";
 //@import "component/placeholders";
 //@import "component/popovers";
-//@import "component/progress";
+@import "component/progress";
 //@import "component/scrollspy";
-//@import "component/spinners";
 //@import "component/toasts";
 //@import "component/tooltips";
 
