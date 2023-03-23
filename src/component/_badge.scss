@@ -1,0 +1,24 @@
+$background-color-badge: #bf1f1f;
+$border-color-badge: #bf1f1f;
+$pixel: 10px;
+
+.notification-badges { 
+    [data-badge] {
+      position:relative;     
+      &:after {
+        position:absolute;
+        right:-$pixel;
+        top:-$pixel;
+        min-width:$pixel;
+        min-height:$pixel;
+        line-height:$pixel;
+        padding:5px;
+        color:#fff;
+        background-color:$background-color-badge;
+        font-size:$pixel;
+        border-radius:20px;
+        content:attr(data-badge);
+        border:solid 1px $border-color-badge;
+      }   
+    }  
+}
