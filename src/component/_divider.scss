@@ -1,21 +1,36 @@
-.h-divider {
-    margin: auto;
-    margin-top: 80px;
-    width: 80%;
-    position: relative;
-    
-    .shadow {
-        overflow: hidden;
-        height: 20px;
+$color-divider:#E0D0CF;
 
-        &:after {
-            content: '';
-            display: block;
-            margin: -25px auto 0;
-            width: 100%;
-            height: 25px;
-            border-radius: 125px/12px;
-            box-shadow: 0 0 8px black;
-          }
+.h-divider {
+  margin: 0 auto;
+  width: 100%;
+  position: relative;
+
+  .solid{
+      border-top: 3px solid $color-divider ;
+      margin-bottom: 20px;
+  }
+
+  .dashed {
+    border-top: 3px dashed $color-divider;
+    margin-bottom: 20px;
+  }
+
+  .dotted {
+    border-top: 3px dotted $color-divider;
+    margin-bottom: 20px;
+  }
+
+  .shadow {
+    overflow: hidden;
+    height: 20px;
+    &:after {
+      content: '';
+      display: block;
+      margin: -25px auto 0;
+      width: 100%;
+      height: 25px;
+      border-radius: 125px/12px;
+      box-shadow: 0 0 8px $color-divider;
+    }
   }
 }
