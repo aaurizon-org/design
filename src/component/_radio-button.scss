@@ -23,29 +23,48 @@
   width: 20px;
   height: 20px;
   border-radius: 100px;
+
+&:focus+.rad-design::after, &:active+.rad-design::after {
+  opacity: .1;
+  transform: scale(2.6);
+}
 }
 
 .rad-design {
   width: 20px;
   height: 20px;
   border-radius: 100px;
-  background: linear-gradient(to right bottom, hsl(303, 97%, 62%), hsl(7, 97%, 62%));
+  background: linear-gradient(to right bottom, black, gray);
   position: relative;
 
-  &::before {
+  &::after, &::before{
     content: '';
     display: inline-block;
     width: inherit;
     height: inherit;
     border-radius: inherit;
+    position: absolute;
+    transform: scale(0);
+    transform-origin: center center;
+  }
+
+  &::before {
     background: hsl(0, 0%, 90%);
     transform: scale(1,1);
     transition: 1s;
+  } 
+
+  &::after {
+    background: black;
+    opacity: .4;
+    transition: .6s;
   }
+
 }
 
 .rad-input:checked+.rad-design::before {
   transform: scale(-0.5);
+  opacity: 1;
 }
 
 .rad-text {
