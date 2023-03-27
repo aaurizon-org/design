@@ -1,20 +1,20 @@
 .breadcrumb{
-    ol{
-        display: flex;
-        flex-wrap: wrap;
-        padding: 0 0;
-        margin-bottom: 1rem;
-        list-style: none;
-    }
-    li{
-        flex: 0 0 auto;
-        flex-shrink: .5; 
-        white-space: nowrap;
-        display: inline-block;
+    
+    display: flex;
+    flex-wrap: wrap;
+    margin-bottom: 1rem;
+    list-style: none;
 
-        a, i{
-            padding: calc(0.125rem + 1px) 0.5rem;
-            color: rgb(31, 31, 31);
-        }
+    a, i
+    {
+        color: rgb(31, 31, 31)!important;
+    }
+    i
+    {
+        padding: 0px 8px;
+    }
+    .active
+    {
+        color: rgba(31, 31, 31,0.6)!important;
     }
 }
