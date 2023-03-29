@@ -21,12 +21,10 @@ $pixel: 10px;
   }   
 }
 
-.notification-badges { 
-  [data-badge] {
-    @include badge($pixel);
-  }   
+[data-badge]:not([data-badge=""]) {
+  @include badge($pixel);
+}
 
-  &>.empty { 
-    @include badge(1px); 
-  }
+[data-badge][data-badge=""] {
+  @include badge(1px);
 }
