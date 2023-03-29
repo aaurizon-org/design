@@ -42,7 +42,7 @@ $colorText-foot:#F06292;
         color: $colorText-title;
         background-color: $colorBack-head;
         padding: 20px;
-        font-style: bold; 
+        font-weight: bold;
         border-radius: 5px 5px 0 0px;
       }
 
@@ -92,6 +92,7 @@ $colorText-foot:#F06292;
       }
     }
 }
+
 .modalContainer {
     max-width: 600px;
 }
