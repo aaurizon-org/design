@@ -7,16 +7,16 @@ hr,
   width: 100%;
   position: relative;
 
-  border-top: 3px solid $color-divider ;
+  border-top: 2px solid $color-divider ;
   margin-bottom: 20px;
 
   &.dashed {
-    border-top: 3px dashed $color-divider;
+    border-top: 2px dashed $color-divider;
     margin-bottom: 20px;
   }
 
   &.dotted {
-    border-top: 3px dotted $color-divider;
+    border-top: 2px dotted $color-divider;
     margin-bottom: 20px;
   }
 
