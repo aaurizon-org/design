@@ -4,10 +4,10 @@ $colorBackHover-notactive:#E3F2FD;
 $colorText-pagination:#2196F3;
 $sizeText-pagination:20px;
 
-.pagination{   
-  display: inline-block;
-
-    &-link{
+.pagination
+{
+    a {
+        display: inline-block;
         text-decoration: none;
         color: $colorText-pagination!important;
         float: left;
@@ -24,18 +24,13 @@ $sizeText-pagination:20px;
             background-color: $colorBackHover-notactive;
         }
 
-
-    }
-    &-prev{
-        &:first-child {
-            border-top-left-radius: 5px;
-            border-bottom-left-radius: 5px;
-        }
-    }
-    &-next{
-        &:last-child {
-            border-top-right-radius: 5px;
-            border-bottom-right-radius: 5px;
-        }
+      &:first-child {
+        border-top-left-radius: 5px;
+        border-bottom-left-radius: 5px;
+      }
+      &:last-child {
+        border-top-right-radius: 5px;
+        border-bottom-right-radius: 5px;
+      }
     }
 }
