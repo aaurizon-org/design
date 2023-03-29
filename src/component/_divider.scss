@@ -1,26 +1,30 @@
-$color-divider:#E0D0CF;
+$color-divider: #E0D0CF;
 
-.h-divider {
+hr,
+.divider
+{
   margin: 0 auto;
   width: 100%;
   position: relative;
 
-  .solid{
-      border-top: 3px solid $color-divider ;
-      margin-bottom: 20px;
-  }
+  border-top: 3px solid $color-divider ;
+  margin-bottom: 20px;
 
-  .dashed {
+  &.dashed {
     border-top: 3px dashed $color-divider;
     margin-bottom: 20px;
   }
 
-  .dotted {
+  &.dotted {
     border-top: 3px dotted $color-divider;
     margin-bottom: 20px;
   }
 
-  .shadow {
+  &.shadow {
+    // RESET
+    border-top: none;
+    margin: 0 auto;*
+    // TON TRUC CHELOU
     overflow: hidden;
     height: 20px;
     &:after {
