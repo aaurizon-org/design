@@ -1,25 +1,21 @@
-// Mettre en haut par défaut
+// DROITE valeur par défaut
 [data-tooltip]
 {
-
     position:relative; 
     cursor: pointer;
     &:before 
     {
-        content: attr(data-text); /* here's the magic */
+        content: attr(data-text);
         position:absolute;
 
-        /* vertically center */
         top:50%;
-        transform:translateY(-50%);
-
-        /* move to right */
-        left:100%;
-        margin-left:10px; /* and add a small left margin */
+        transform: translateY(-50%);;
+        left:105%;
+       
 
         /* basic styles */
         width:200px;
-        padding:10px;
+        padding: 0.2em;
         border-radius:10px;
         background:#000;
         color: #fff;
@@ -42,7 +38,7 @@
         position:absolute;
         
         /* position tooltip correctly */
-        left:100%;
+        left:98%;
         margin-left:-5px;
        
         /* vertically center */
@@ -77,7 +73,7 @@
     }
     &:after
     {
-        left: -12px;
+        left: -10%;
         border-color: transparent transparent transparent black;
     }
 }
@@ -101,20 +97,20 @@
 }
 
 
-[data-direction="botom"]
+[data-direction="bottom"]
 {
     &:before 
     {
         margin:initial;
-        left: -10%;        
         margin-top:5px;
-        transform: translateY(50%);
-        top:0%;
+        top: 100%;
+        transform: translateX(-50%);
+        left: 50%;
     }
     &:after
     {
-        left: 1%;
-        top: 100%;
+        left: 50%;
+        transform: translateX(-50%);
         border-color:  transparent transparent black transparent;
     }
 }
