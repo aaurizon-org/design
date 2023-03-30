@@ -1,8 +1,11 @@
+
 .rad-label {
   display: flex;
   align-items: center;
   border-radius: 100px;
   margin: 8px 0;
+  max-width: fit-content;
+  padding-right: 10px;
   
   cursor: pointer;
   transition: 1s;
@@ -25,8 +28,7 @@
   border-radius: 100px;
 
 &:focus+.rad-design::after, &:active+.rad-design::after {
-  opacity: .1;
-  transform: scale(2.6);
+  transform: scale(1.6);
 }
 }
 
@@ -34,7 +36,7 @@
   width: 20px;
   height: 20px;
   border-radius: 100px;
-  background: linear-gradient(to right bottom, black, gray);
+  background: linear-gradient(to right bottom, $color-grey-darker, $color-grey);
   position: relative;
 
   &::after, &::before{
@@ -55,8 +57,7 @@
   } 
 
   &::after {
-    background: black;
-    opacity: .4;
+    background: $color-grey-darker-shadow;
     transition: .6s;
   }
 
@@ -75,11 +76,4 @@
 
 .rad-input:checked~.rad-text {
   color: hsl(0, 0%, 40%);
-}
-
-
-// // radio css johan
-input[name="radio1"] {
-
-accent-color: rgb(192, 39, 166);
 }
