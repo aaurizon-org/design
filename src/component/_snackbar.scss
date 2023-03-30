@@ -42,31 +42,29 @@
     bottom: 0px;
      
     .snackbar {   
-        display:flex;
-        justify-content: space-between;
+        display:inline-block;
         border-radius: 10px;
         padding: 0px 0px 0px 40px;
-        position:relative;  
+        position:relative; 
         width: 100%;
-        bottom: -200px;
+        bottom: -250px;
+        
+        transform: translateX(100%);    
         transition: bottom 0.5s ease-in-out;
         z-index:9;
         
         &.animated {
             animation-name: snackbar-show;
-            animation-duration: 3s;
+            animation-duration: 2s;
             animation-timing-function: ease-in-out;
-            animation-delay:1s;
+            animation-delay:0.5s;
             animation-fill-mode: forwards;
             }
     
         @keyframes snackbar-show {
             0%{ bottom:-200px;opacity: 0;}
-            30%, 35% {bottom:15px; opacity: 1;}
-            32.5%, 40% {bottom:10px; }
-            70%, 77.5% {bottom:10px; }
-            75%,80% {bottom:15px; opacity: 1;}
-            100% {bottom:-200px; opacity: 0;}
+            80%, 85% {bottom:15px; opacity: 1;}
+            82.5%, 100% {bottom:10px; }
         } 
 
         &.info{
