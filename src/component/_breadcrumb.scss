@@ -5,13 +5,20 @@
     margin-bottom: 1rem;
     list-style: none;
 
-    a, i
+
+    a
     {
         color: rgb(31, 31, 31)!important;
-    }
-    i
-    {
         padding: 0px 8px;
+
+        &::after
+        {
+            content: "/";
+            padding-left: 8px;
+            display: inline-block;
+            text-decoration: none;
+        }
+
     }
     .active
     {
