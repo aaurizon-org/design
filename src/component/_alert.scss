@@ -1,3 +1,11 @@
+@mixin rtl($color, $bg, $border) 
+{
+    background-color: $bg;
+    color: $color;
+    border: 1px solid $border;;
+
+}
+
 .alert {
     justify-content: space-between;
     display: flex;
@@ -10,6 +18,8 @@
     border: 1px solid transparent;
     border-radius: 0.375rem;
 
+    animation-name: slidein;
+    animation-duration: 0.6s;
 
     button
     {
@@ -49,10 +59,18 @@
 
 }
 
-@mixin rtl($color, $bg, $border) 
-{
-    background-color: $bg;
-    color: $color;
-    border: 1px solid $border;;
 
+@keyframes  slidein 
+{
+    from 
+    {
+        margin-left: 100%;
+        width: 300%;
+    }
+    
+    to 
+    {
+        margin-left: 0%;
+        width: 100%;
+    }
 }
