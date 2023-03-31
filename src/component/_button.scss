@@ -1,125 +1,120 @@
 $animation-test: cubic-bezier(0.4, 0, 0.2, 1) !default;
 
-@mixin button-color($color,$bg) {
- background-color:$bg;
- box-shadow:
-         0px 3px 2px -2px rgba($color, 0.2),
-         0px 2px 2px 0px rgba($color, 0.12);
+ $animation-test: cubic-bezier(0.4, 0, 0.2, 1) !default;
 
-    // Droite Bas Adouciceur TailleExtra
-    &:active
-    {
+ @mixin button-color($color,$bg) {
+  background-color:$bg;
+  box-shadow:
+          0px 3px 2px -2px rgba($color, 0.2),
+          0px 2px 2px 0px rgba($color, 0.12);
+
+  // Droite Bas Adouciceur TailleExtra
+  &:active
+  {
     background-color: rgba(darken($bg, 25%), 0.5);
     box-shadow:
             0px 3px 2px -2px rgba($color, 0.2),
             0px 2px 4px 2px rgba($color, 0.12);
+  }
+}
+
+ button,
+ .button
+ {
+   // Structure
+   display: block;
+   box-sizing: border-box;
+   width: 100%;
+  //  height: 2em;
+   border: none;
+   padding: 0 1em;
+   line-height: 2.25em;
+
+   // Font
+   font-family: "Roboto";
+   font-weight: bold;
+   text-transform: uppercase;
+   text-align: center;
+   text-decoration: none;
+
+   // Style
+   @include  button-color(black,#00BCD4) ;
+   color: black;
+
+   // Effects
+   &:hover
+   {
+     cursor: pointer;
+   }
+   transition:
+    background-color 0.2s $animation-test,
+    box-shadow 0.2s $animation-test;
+
+
+    &.button-raised
+    {
+     @include  button-color(black,#EEEEEE) ;
     }
-}
-
-button,
-.button
-{
-  // Structure
-  display: block;
-  box-sizing: border-box;
-  width: 100%;
- //  height: 2em;
-  border: none;
-  padding: 0 1em;
-  line-height: 2.25em;
-
-  // Font
-  font-family: "Roboto";
-  font-weight: bold;
-  text-transform: uppercase;
-  text-align: center;
-  text-decoration: none;
-
-  // Style
-//   @include  button-color(black,#EEEEEE) ;
-  color: black;
-
-  // Effects
-  &:hover
-  {
-    cursor: pointer;
-  }
-  transition:
-   background-color 0.2s $animation-test,
-   box-shadow 0.2s $animation-test;
-    // Droite Bas Adouciceur TailleExtra
-  &:active
-  {
-    background-color: rgba(darken(#EEEEEE, 25%), 0.5);
-  }
-
-   &.button-raised
-   {
-        @include  button-color(black,#EEEEEE) ;
-   }
-   &.success
-   {
-       @include button-color(black, rgb(88, 197, 91));
-   }
+    
+    &.button-frame
+    {
+      background-color: transparent;
+      box-shadow: none;
    
-   &.button-frame
-   {
-     background-color: transparent;
-     box-shadow: none;
-  
-     &:active
-     {
-       background-color: transparent;
-       box-shadow: none;
-     }
-     border: 1px solid rgba(158, 158, 158, 0.5);
-     border-radius: 4px;
-   
-     &:hover
-     {
-       background-color: rgba(158, 158, 158, 0.1);
-     }
-     &:active
-     {
-       background-color: rgba(158, 158, 158, 0.2);
-     }
-     
-     &.success
-     {
-       border-color: rgb(76, 175, 80) !important;
-       &:hover, &:active
-       {
-         background-color: rgba(76, 175, 80,0.2);
-       }
-     }
-     &.danger
-     {
-       border-color: rgb(244, 67, 54) !important;
-       &:hover, &:active
-       {
-         background-color: rgba(244, 67, 54,0.2);
-         color: black;
-       }
-     }
-   }
-   
-   &.button-flat
-   {
-     background-color: transparent;
-     box-shadow: none;
-     &:active
-     {
-       background-color: transparent;
-       box-shadow: none;
-     }
-     &:hover
-     {
-       background-color: rgba(158, 158, 158, 0.2);
-     }
-     &:active
-     {
-       background-color: rgba(darken(rgb(158, 158, 158), 25%), 0.2);
-     }
-   }
+      &:active
+      {
+        background-color: transparent;
+        box-shadow: none;
+      }
+      border: 1px solid rgba(158, 158, 158, 0.5);
+      border-radius: 4px;
+    
+      &:hover
+      {
+        background-color: rgba(158, 158, 158, 0.1);
+      }
+      &:active
+      {
+        background-color: rgba(158, 158, 158, 0.2);
+      }
+      
+      &.success
+      {
+        border-color: rgb(76, 175, 80) !important;
+        &:hover, &:active
+        {
+          background-color: rgba(76, 175, 80,0.2);
+        }
+      }
+      &.danger
+      {
+        border-color: rgb(244, 67, 54) !important;
+        &:hover, &:active
+        {
+          background-color: rgba(244, 67, 54,0.2);
+          color: black;
+        }
+      }
+    }
+    
+    &.button-flat
+    {
+      background-color: transparent;
+      box-shadow: none;
+      &:active
+      {
+        background-color: transparent;
+        box-shadow: none;
+      }
+      &:hover
+      {
+        background-color: rgba(158, 158, 158, 0.2);
+      }
+      &:active
+      {
+        background-color: rgba(darken(rgb(158, 158, 158), 25%), 0.2);
+      }
+    }
 
-}
+ }
+
