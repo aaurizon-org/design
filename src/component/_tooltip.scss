@@ -1,0 +1,122 @@
+// DROITE valeur par défaut
+[data-tooltip]
+{
+    position:relative; 
+    cursor: pointer;
+    &:before 
+    {
+        content: attr(data-text);
+        position:absolute;
+
+        top:50%;
+        transform: translateY(-50%);;
+        left:105%;
+       
+
+        /* basic styles */
+        width:200px;
+        padding: 0.2em;
+        border-radius:10px;
+        background:#000;
+        color: #fff;
+        text-align:center;
+
+        display:none; /* hide by default */
+        opacity:0;
+        transition:.3s opacity; 
+    }
+    &:hover:before 
+    {
+        display:block;
+        opacity:1;
+        z-index: 5;
+    }
+
+    &:after 
+    {
+        content: "";
+        position:absolute;
+        
+        /* position tooltip correctly */
+        left:98%;
+        margin-left:-5px;
+       
+        /* vertically center */
+        top:50%;
+        transform:translateY(-50%);
+       
+        /* the arrow */
+        border:10px solid #000;
+        border-color: transparent black transparent transparent;
+        
+        display:none;
+        opacity:0;
+        transition:.3s;
+    }
+
+    &:hover:after 
+    {
+        opacity:1;
+        display:block;
+    }
+}
+
+
+[data-direction="left"]
+{
+    &:before 
+    {
+        left:initial;
+        margin:initial;
+        right:100%;
+        margin-right:15px;
+    }
+    &:after
+    {
+        left: -10%;
+        border-color: transparent transparent transparent black;
+    }
+}
+
+[data-direction="top"]
+{
+    &:before 
+    {
+        margin:initial;
+        left: 50%;
+        transform: translate(-50%, -112%);
+        top: 0%;
+    }
+    &:after
+    {
+        left: 50%;
+        transform: translate(-25%, -40%);
+        top: 0%;
+        border-color: black transparent transparent transparent;
+    }
+}
+
+
+[data-direction="bottom"]
+{
+    &:before 
+    {
+        margin:initial;
+        margin-top:5px;
+        top: 100%;
+        transform: translateX(-50%);
+        left: 50%;
+    }
+    &:after
+    {
+        left: 50%;
+        transform: translateX(-50%);
+        border-color:  transparent transparent black transparent;
+    }
+}
+
+
+
+
+
+
