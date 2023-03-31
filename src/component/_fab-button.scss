@@ -27,7 +27,6 @@
 .small-fab
 {
     @extend .fab;
-    display: block;
     height: 40px;
     min-width: 40px;
     width: 40px;
@@ -35,6 +34,7 @@
 
     &::before
     {
+        display: block;
         font-size: 12px;
     }
 }
