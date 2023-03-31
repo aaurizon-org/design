@@ -1,4 +1,5 @@
-.fab {
+.fab 
+{
     border-radius: 50%;
     font-size: 24px;
     height: 56px;
@@ -11,28 +12,29 @@
 
     @extend .button;
 
-    &::after
+    &::before
     {
         content: "+" !important;
     }
-    
 }
 
-.fab-box{
+.fab-box
+{
     @extend .fab;
     border-radius: 16px;
 }
 
-.small-fab{
+.small-fab
+{
     @extend .fab;
+    display: block;
     height: 40px;
     min-width: 40px;
     width: 40px;
     border-radius: 12px;
-    &::after
+
+    &::before
     {
-        // changer la taille du content avec le font size    
+        font-size: 12px;
     }
 }
-
-   
