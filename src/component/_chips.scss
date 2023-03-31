@@ -1,0 +1,77 @@
+$color-back-empty:#5fb617;
+$color-chip:#fff;
+$color-chip-back:#DEDEDE;
+
+.chip{
+    display: inline-flex;
+    flex-direction: row;
+    background-color: $color-chip-back;
+    border: none;
+    cursor: default;
+    height: 36px;
+    outline: none;
+    padding: 0;
+    margin: 10px;
+    width: max-content;
+    font-size: 14px;
+    white-space: nowrap;
+    align-items: center;
+    border-radius: 16px;
+    vertical-align: middle;
+    text-decoration: none;
+    justify-content: center;
+
+    //tête de la chip
+    .chip-avatar {
+        display: flex;
+        position: relative;
+        overflow: hidden;
+        background-color: $color-back-empty;
+        font-size: 1.25rem;
+        flex-shrink: 0;
+        align-items: center;
+        user-select: none;
+        border-radius: 50%;
+        justify-content: center;
+        width: 36px;
+        color: $color-chip;
+        height: 36px;
+        font-size: 20px;
+        margin-right: -8px;
+    }
+
+    //corps de la chip
+    .chip-content{
+        cursor: inherit;
+        display: flex;
+        align-items: center;
+        user-select: none;
+        white-space: nowrap;
+        padding-left: 12px;
+        padding-right: 12px;
+    }
+    
+    //element de fin
+    .chip-close{
+        &-button {
+            margin-left: 10px;
+            color: #999999;
+            cursor: pointer;
+            height: auto;
+            margin: 4px 4px 0 -8px;
+            fill: currentColor;
+            width: 1em;
+            height: 1em;
+            display: inline-block;
+            font-size: 24px;
+            transition: fill 200ms cubic-bezier(0.4, 0, 0.2, 1) 0ms;
+            user-select: none;
+            flex-shrink: 0;
+        
+            &:hover {
+                color: #000;
+            }
+        }
+    }
+}
+

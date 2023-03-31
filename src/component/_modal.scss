@@ -1,3 +1,17 @@
+$sizeText-title:32px;
+$colorText-title:white;
+$colorBack-head:#E91E63;
+$colorBack-close:#D81B60;
+$colorText-close:#FCE4EC;
+$back-content:$colorText-close;
+$colorText:black;
+$sizeText:16px;
+$modalBack:rgba(0, 0, 0, .8);
+$colorText-foot:#F06292;
+
+
+
+
 .modal {
     opacity: 0;
     position: absolute;
@@ -6,7 +20,7 @@
     top: 0;
     left: 0;
     overflow: hidden;
-    background: rgba(0, 0, 0, .8);
+    background: $modalBack;
     transition: opacity linear .2s;
 
     &:target {
@@ -16,24 +30,53 @@
 
     &__content {
       position: relative;
-      background: #fff;
-      padding: 20px;
       width: 60%;
       top: 50%;
       left: 50%;
-      transform: translate(-50%, -50%);
+      transform: translate(-50%, -50%); 
       z-index: 200;
+      box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px;
+
+      &__head{
+        font-size: $sizeText-title;
+        color: $colorText-title;
+        background-color: $colorBack-head;
+        padding: 20px;
+        font-weight: bold;
+        border-radius: 5px 5px 0 0px;
+      }
+
+      &__corp{
+        padding: 20px;
+        color: $colorText;
+        font-size: $sizeText;
+        background:$back-content;
+      }
+
+      &__foot{
+        padding: 20px;
+        color: $colorText-foot;
+        background-color: $back-content;
+        border-radius: 0 0 5px 5px;
+        display: flex;
+        justify-content: flex-end;
+        span,div,button{
+          margin: 0 10px;  ;
+        }
+      }
+
       &__close {
         position: absolute;
-        top: -10px;
-        right: -10px;
+        top: 10px;
+        right: 10px;
         width: 20px;
         line-height: 20px;
-        border-radius: 20px;
-        text-align: center;
-        padding: 5px;
-        background: #2980b9;
-        color: #fff!important;  
+        border-radius: 50px;
+        text-decoration: none;
+        display: flex;
+        justify-content: center;
+        background: $colorBack-close;
+        color: $colorText-close!important;  
       }
     }
 
@@ -49,6 +92,8 @@
       }
     }
 }
+
 .modalContainer {
     max-width: 600px;
 }
+

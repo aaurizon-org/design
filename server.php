@@ -21,6 +21,7 @@ $nav = [
     ],
     "Components" => [
         'button',
+        'badge',
     ],
 ];
 
