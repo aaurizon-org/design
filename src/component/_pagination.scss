@@ -1,0 +1,36 @@
+$colorText-active:white;
+$colorBack-active:#2196F3;
+$colorBackHover-notactive:#E3F2FD;
+$colorText-pagination:#2196F3;
+$sizeText-pagination:20px;
+
+.pagination
+{
+    a {
+        display: inline-block;
+        text-decoration: none;
+        color: $colorText-pagination!important;
+        float: left;
+        padding: 8px 16px;
+        transition: background-color 0.3s;
+        font-size: $sizeText-pagination;
+        border: 1px solid black;
+        
+        &.active {
+            background-color: $colorBack-active;
+            color: $colorText-active!important;
+        }
+        &:hover:not(.active) {
+            background-color: $colorBackHover-notactive;
+        }
+
+      &:first-child {
+        border-top-left-radius: 5px;
+        border-bottom-left-radius: 5px;
+      }
+      &:last-child {
+        border-top-right-radius: 5px;
+        border-bottom-right-radius: 5px;
+      }
+    }
+}

@@ -1,55 +1,124 @@
-.list-group-box{
-    width: 50%;
-    >.titleListGroup {
-        background-color: #FAFDFF;
-        font-size: 12px;
-        font-weight: bold;
-        padding: 12px;
-    }
+$group-color: #212529;
+$group-bg: #fff;
+$group-border-color: rgba(0, 0, 0, 0.125);
+$group-border-width: 1px;
+$action-color: #495057;
+$action-hover-color: #495057;
+$action-hover-bg: #f8f9fa;
+$action-active-color: #212529;
+$action-active-bg: #e9ecef;
+$disabled-color: #6c757d;
+$disabled-bg: #fff;
+$active-color-texte: #fff;
+$active-color: #3F51B5;
 
-    .list-group{
-        
-        display: -ms-flexbox;
-        display: flex;
-        -ms-flex-direction: column;
-        flex-direction: column;
-        padding-left: 0;
-        margin-bottom: 0;
-        border-radius: 4px;
-        
-        color: #007bff;
+.list-group 
+{
+    display: flex;
+    flex-direction: column;
+    padding-left: 0;
+    margin-bottom: 0;
+    border-radius: 0.375rem;
+
+    .item 
+    {
+        position: relative;
+        display: block;
+        padding: 0.5rem 1rem;
+        color: $group-color;
         text-decoration: none;
-        background-color: transparent;
+        background-color: $group-bg;
+        border: $group-border-width solid $group-border-color;
 
-        &-flush{
-            border-radius: 0;
-            a[href]:not(.Button):not(.ButtonBlock) {
-                text-decoration: none;
-            }
-
-            >.list-group-item{
-                border-width: 0 0 1px;
-            }
+        &:first-child 
+        {
+            border-top-left-radius: inherit;
+            border-top-right-radius: inherit;
         }
-
-        &-item{
-            position: relative;
-            display: block;
-            padding: 12px 20px;
-            background-color: #fff;
-            border: 1px solid rgba(0,0,0,.125);
-
-            &:first-child{
-                border-top-left-radius: inherit;
-                border-top-right-radius: inherit;
-            }
-
-            &-action{     
-                width: 100%;
-                color: #495057 !important;
-                text-align: inherit;
-            }
+        &:last-child 
+        {
+            border-bottom-right-radius: inherit;
+            border-bottom-left-radius: inherit;
         }
+        &.disabled, &:disabled 
+        {
+            color: $disabled-color;
+            pointer-events: none;
+            background-color: $disabled-bg;
+        }
+        &.active 
+        {
+            z-index: 2;
+            color: $active-color-texte!important;
+            background-color: $active-color;
+            border-color: $active-color;
+        }
+      }
+      
+
+      .item + .item 
+      {
+        border-top-width: 0;
+      }
+      .item + .item.active 
+      {
+        margin-top: calc(-1 * $group-border-width);
+        border-top-width: $group-border-width;
+      }
+    
+      .action 
+      {
+        width: 100%;
+        color: $action-color;
+        text-align: inherit;
+        &:hover, &:focus 
+        {
+            z-index: 1;
+            cursor: pointer;
+            color: $action-hover-color;
+            text-decoration: none;
+            background-color: $action-hover-bg;
+          }
+        &:active 
+        {
+            color: $action-active-color;
+            background-color: $action-active-bg;
+        }
+      }
+
+
+    .itemflush
+    {
+        @extend .item;
+        border: none;
     }
-}
+    .itemFlushEspace
+    {
+        @extend .item;
+        border: none;
+        margin-bottom: 32px;
+    }
 
+    @mixin item-variant($state, $background, $color) 
+    {
+        .item-#{$state} 
+        {
+          color: $color;
+          background-color: $background;
+      
+          &.action {
+            &:hover,
+            &:focus {
+              color: $color;
+              background-color: shade-color($background, 10%);
+            }
+      
+            &.active {
+              color: $white;
+              background-color: $color;
+              border-color: $color;
+            }
+          }
+        }
+      }
+  }
