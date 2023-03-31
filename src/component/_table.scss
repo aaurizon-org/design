@@ -1,0 +1,45 @@
+$colorHeadTable-font:white;
+$colortablePrimaire:#e9e9e9;
+$colortableSecondaire:#f6f6f6;
+$colorBlue:#00B0FF;
+$colorRed:#FF5252;
+
+@mixin setupHead($color, $font){
+    color:$font;
+    background-color: $color;
+}
+.table{
+    width: 100%;
+    box-shadow: 0 1px 3px rgba(0,0,0,0.2);
+    border-collapse: collapse;
+    max-width: fit-content;
+    thead{
+        height: 56px;
+        &.red{
+            @include setupHead($colorRed,$colorHeadTable-font)
+        }
+        &.blue{
+            @include setupHead($colorBlue,$colorHeadTable-font)
+        }
+    }
+    tbody{
+        height: 52px;
+        background: $colortableSecondaire;
+        
+        &:nth-of-type(odd){
+            background: $colortablePrimaire;
+        }
+     }
+    tbody,thead{
+        tr th{
+            padding: 0px 16px;
+            text-align: left;
+            &.number{
+                text-align: right;
+            }
+
+
+        }     
+    }
+}
+
