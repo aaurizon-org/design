@@ -1,43 +1,45 @@
-.table{
-    margin: 0 0 40px 0;
-    width: 100%;
-    box-shadow: 0 1px 3px rgba(0,0,0,0.2);
-    display: table;
-}
 
-.row{
-    display: table-row;
-    height: 48px;
-    background: #f6f6f6;
-    
-    &:nth-of-type(odd){
-        background: #e9e9e9;
-    }
+$colorFontChecked:#FFEB3B;
+$colorHeadChecked:#F44336;
+$colorTabs:white;
+$borderBot:5px;
 
-    &.header{
-        font-weight: 900;
-        color: #ffffff;
-        background: #ea6153;
-    }
-
-    .cell{
-        margin-bottom: 10px;
-        vertical-align: middle;
-        
-        &:before{
-            margin-bottom: 3px;
-            min-width: 98px;
-            font-size: 10px;
-            line-height: 10px;
-            font-weight: bold;
-            text-transform: uppercase;
-            color: #969696;
-            display: block;
+.tabs {
+    display: flex;
+    flex-wrap: wrap;
+    label {
+        order: 1;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        padding: 1rem 2rem;
+        margin-right: 0.2rem;
+        cursor: pointer;
+        background-color: $colorHeadChecked;
+        flex: 1;
+        border-bottom: $borderBot solid transparent;
+        &:hover{
+            background-color: lighten($colorHeadChecked, 20);
+            color: $colorFontChecked;
+            border-bottom: $borderBot solid $colorFontChecked;
         }
-    }     
-}
-  
-.cell{
-    padding: 6px 12px;
-    display: table-cell;
+    }
+    .tab {
+        order: 9;
+        width: 100%;
+        display: none;
+        background: $colorTabs;
+        padding: 20px;
+    }
+    input[type="radio"] {
+        display: none;
+        &:checked + label {
+            background: darken($colorHeadChecked, 20);
+            color: $colorFontChecked;
+            border-bottom: $borderBot solid $colorFontChecked;
+            + .tab {
+                display: block;
+            }
+        }
+    }
 }

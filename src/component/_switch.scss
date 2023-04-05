@@ -1,0 +1,113 @@
+$colorSwitch-checked:#66BB6A;
+$colorZone: #EEEEEE;
+$colorCercleDark:#BDBDBD;
+$witchZone:100px;
+$heightZone:50px;
+$sizeCercle:20px;
+$sizeCercleChecled:35px;
+$colorCercle:white;
+$transitionChecked:0.4s;
+
+
+@mixin cercle(){
+    position: absolute;
+    width: $sizeCercle;
+    height: $sizeCercle;
+    background: $colorCercleDark;
+    box-shadow: 0 0 5px rgba(0, 0, 0, 0.2);
+    border-radius: 50%;
+    transition: $transitionChecked;
+    top: 14px;
+    left: 6px;
+}
+
+@mixin cercleChecked(){
+    position: absolute;
+    width: $sizeCercleChecled;
+    height: $sizeCercleChecled;
+    background: $colorCercleDark;
+    box-shadow: 0 0 5px rgba(0, 0, 0, 0.2);
+    border-radius: 50%;
+    transition: $transitionChecked;
+    top: 7px;
+    left: 6px;
+    background-color:$colorCercle ;  
+    box-shadow: inset 0 0 5px rgba(0, 0, 0, 0.2);
+    
+    left: 57%;
+}
+
+@mixin zone(){
+    width: $witchZone;
+    height: $heightZone;
+	border-radius: 500px;
+	background: $colorZone;
+    box-shadow: inset 0 0 5px rgba(0, 0, 0, 0.2);
+    position: relative;
+    transition: $transitionChecked;
+}
+
+//checkbox
+input[type="checkbox"] {
+    @include zone();
+    appearance: none;
+    cursor: pointer;
+    
+    &::after {
+        content: "";
+        @include cercle();
+        transform: scale(1.1);//taille
+    }
+}
+
+input:checked[type="checkbox"] {
+    background: $colorSwitch-checked!important;
+    &::after {
+    @include cercleChecked();
+    }
+}
+
+//radio
+.switch {
+	display: flex;
+	align-items: center;
+	label {
+		font-size: 26px;
+		flex: 0.1;
+		z-index: 3;
+		cursor: pointer;
+		transition: 500ms;
+		&.off {
+		right: 60px;	
+        position: relative;
+		text-align: right;
+		}   
+		&.on {
+			left: 60px;	
+            position: relative;
+		}
+		}
+		[type=radio]{
+				display: none;
+		}
+	
+	.zone {
+        @include zone();
+        .cercle {
+            @include cercle();    
+            z-index: 4;
+        }
+	}
+
+	#off:checked~.zone .cercle {
+        @include cercleChecked();
+        
+    box-shadow: inset 0 0 5px rgba(0, 0, 0, 0.2);
+	}
+
+	#off:checked~.zone {
+		background-color: $colorSwitch-checked;
+	}
+}
+
+

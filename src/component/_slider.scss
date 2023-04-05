@@ -1,0 +1,95 @@
+// $colorslide-green:#4CAF50;
+// $colorslide-blue: #2196F3;
+// $colorslide-red:#F44336;
+// $colorslide-yellow:#FFEB3B;
+// $colorslide-pink:#E91E63;
+// $colorslide-orange:#FF9800;
+// $colorselect:white;
+
+// $sizeslide:500px;
+
+// @mixin colorselect($colorselect) {
+//     background-color: $colorselect;
+// }
+
+// .slider {
+//     display:flex;
+//     flex-direction:column;
+//     align-items:center;
+//     justify-content:space-around;
+//     width: fit-content;
+//     padding:25px;
+//     border-radius:5px;
+//     box-shadow: rgba(50, 50, 93, 0.25) 0px 13px 27px -5px, rgba(0, 0, 0, 0.3) 0px 8px 16px -8px;
+
+//     input[type=range]{
+//         -webkit-appearance: none;
+//         width: $sizeslide;
+//         margin: 10px 0px;
+//         background:transparent;
+
+//         &::-webkit-slider-runnable-track{
+//             width: 100%;
+//             height: 10px;
+//             cursor: pointer;
+//             animate: 0.2s;
+//             box-shadow: 1px 1px 1px #000000;
+//             background: #3071A9;
+//             border-radius: 5px;
+//             border: 1px solid #000000;
+//         }
+//         &::-webkit-slider-thumb {
+//             -webkit-appearance: none;
+//             height:16px;
+//             width:16px;
+//             border-radius:50%;
+//             border:none;
+//             background-color:$colorslide-green;
+//             box-shadow:inset .5px .5px 1px #57575780; 
+//             transform:translateY(-5px);
+//             &:hover{
+//                 height: 32px;
+//                 width: 32px;
+//                 margin-top: -8px;
+//                 transition:all .2s;
+//                 opacity: 0.8;
+//             }
+//         }
+//     }
+// }  
+  
+input[type=range] 
+{
+    height: 36px;
+    -webkit-appearance: none;
+    margin: 10px 0;
+    width: 100%;
+  &:focus 
+  {
+    outline: none;
+  }
+  &::-webkit-slider-runnable-track 
+  {
+    width: 100%;
+    height: 10px;
+    cursor: pointer;
+    animate: 0.2s;
+    box-shadow: 1px 1px 1px #000000;
+    background: #3071A9;
+    border-radius: 5px;
+    border: 1px solid #000000;
+  }
+  &::-webkit-slider-thumb 
+  {
+    box-shadow: 1px 1px 1px #000000;
+    border: 2px solid #236772;
+    height: 27px;
+    width: 27px;
+    border-radius: 50%;
+    background: #FFFFFF;
+    cursor: pointer;
+    -webkit-appearance: none;
+    margin-top: -10px;
+  }
+}
+  

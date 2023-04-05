@@ -19,4 +19,21 @@ hr,
     border-top: 2px dotted $color-divider;
     margin-bottom: 20px;
   }
+  &.shadow {
+    // RESET
+    border-top: none;
+    margin: 0 auto;
+    // TON TRUC CHELOU
+    overflow: hidden;
+    height: 20px;
+    &:after {
+      content: '';
+      display: block;
+      margin: -25px auto 0;
+      width: 100%;
+      height: 25px;
+      border-radius: 125px/12px;
+      box-shadow: 0 0 8px $color-divider;
+    }
+  }
 }

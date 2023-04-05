@@ -39,13 +39,15 @@
 // Component
 @import "component/button";
 @import "component/button-segmented";
+@import "component/fab-button";
+@import "component/fab-button-extended";
 @import "component/divider";
 @import "component/checkbox";
 @import "component/input-text.scss";
 @import "component/radio-button";
 @import "component/snackbar";
 @import "component/accordion";
-//@import "component/alerts";
+@import "component/alert";
 //@import "component/badge";
 @import "component/breadcrumb";
 @import "component/badge";
@@ -69,9 +71,13 @@
 //@import "component/placeholders";
 //@import "component/popovers";
 @import "component/progress";
+@import "component/progress-indicator";
 //@import "component/scrollspy";
+@import "component/slider";
 //@import "component/toasts";
-//@import "component/tooltips";
+@import "component/switch";
+@import "component/table";
+@import "component/tooltip";
 
 
 
