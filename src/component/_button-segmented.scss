@@ -1,0 +1,28 @@
+$colorFocus:#4CAF50;
+$colorBacksegmented:#C8E6C9;
+
+.segmented{
+    display: flex;
+    button{
+        &:first-child{
+            border-top-left-radius: 50px;
+            border-bottom-left-radius: 50px;
+        }
+        &:last-child {
+            border-top-right-radius: 50px;
+            border-bottom-right-radius: 50px;
+          }
+        margin:0;
+        background-color:lighten($colorBacksegmented, 10);
+        border-color: lighten($colorFocus, 10);
+        color: black;
+        &:focus{
+            background-color: $colorBacksegmented;
+            color: black;
+        }
+        &:hover{
+            background-color: darken($colorBacksegmented, 10);
+            color: black;
+        }
+    }
+}
