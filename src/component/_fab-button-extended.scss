@@ -1,0 +1,6 @@
+.fab-extended{
+    @extend .fab-box;
+    min-width: 80px;
+    text-transform: none;
+    width: auto;
+}

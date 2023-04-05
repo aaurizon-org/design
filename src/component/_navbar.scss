@@ -1,14 +1,53 @@
+//varible color
+$color-red: #F44336;
+$color-blue: #2196F3;
+$color-green: #4CAF50;
+$color-pink: #E91E63;
+$color-yellow: #FFEB3B;
+$color-orange: #FF9800;
+$color-purple: #9C27B0;
+$color-grey: #9E9E9E;
+$color-brown: #795548;
+
 .navbar{
-    position: fixed;
+    position: sticky;
+    top: 0;;
     width: 100%;
     display: flex;
+    &.red{
+        background: $color-red;
+    }
+    &.blue{
+        background: $color-blue;
+    }
+    &.green{
+        background: $color-green;
+    }
+    &.pink{
+        background: $color-pink;
+    }
+    &.purple{
+        background: $color-purple;
+    }
+    &.yellow{
+        background: $color-yellow;
+    }
+    &.orange{
+        background: $color-orange;
+    }
+    &.brown{
+        background: $color-brown;
+    }
+    &.grey{
+        background: $color-grey;
+    }
 
     .startNavbar,.endNavbar,.centerNavbar
     {
         padding: 16px;
         width: inherit;
         text-align: start;
-        background: #f44336;
+        
 
         li{
             height: auto;
