@@ -1,3 +1,4 @@
+
 //varible color
 $color-red: #F44336;
 $color-blue: #2196F3;
@@ -5,7 +6,7 @@ $color-green: #4CAF50;
 $color-pink: #E91E63;
 $color-yellow: #FFEB3B;
 $color-orange: #FF9800;
-$color-purple: #9C27B0;
+$color-purple: $colorsPurple;
 $color-grey: #9E9E9E;
 $color-brown: #795548;
 
@@ -47,16 +48,17 @@ $color-brown: #795548;
         padding: 16px;
         width: inherit;
         text-align: start;
-        
+        flex: 1;
 
         li{
             height: auto;
             float: left;
-            text-align: center;
             list-style: none;
+            flex: 1;
 
             a{
-                color: #FFF;
+                color: #FFF!important;
+                text-align: center;
                 text-decoration: none;
                 font: 20px Raleway;
                 margin: 0px 10px;
@@ -74,6 +76,8 @@ $color-brown: #795548;
                 height: auto;
                 margin: 0;
                 padding: 0;
+                position: absolute;
+                background: $colorsPurple;
                 display: none;
 
                 a:before{
@@ -92,6 +96,9 @@ $color-brown: #795548;
                 {
                     width: 100%;
                 }
+                a{
+                    text-align: inherit;
+                }
             }
         } 
     }
@@ -99,11 +106,13 @@ $color-brown: #795548;
     .centerNavbar{
         display:flex;
         justify-content: center;
+        flex: 4;
     }
 
     .endNavbar{
         display:flex;
         justify-content: end;
+        flex: 1;
     }
 } 
 
