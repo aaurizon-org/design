@@ -13,4 +13,20 @@
  * See the License for the specific language governing permissions and
  * limitations under the License.
  */
- 
+ #FOOTER
+{
+  @extend .HLayout;
+
+  margin-top: auto;
+  padding: .5em;
+  background: black;
+  justify-content: center;
+  width: 100%;
+  a
+  {
+    display: inline-block;
+    padding: .5em;
+    color: rgba(white, 70%);
+    font-style: italic;
+  }
+}
