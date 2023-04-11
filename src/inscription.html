@@ -1,0 +1,97 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta charset="utf-8" />
+  <meta name="description" content="Sample of style library." />
+  <script src="https://kit.fontawesome.com/53ad689935.js" crossorigin="anonymous"></script>
+  <title>Inscription</title>
+  <link rel="preconnect" href="https://fonts.gstatic.com">
+  <link rel="stylesheet"
+    href="https://fonts.googleapis.com/css2?family=Open+Sans:wght@300;400;700&family=Roboto:wght@300;400;500;700&display=swap">
+  <link rel="stylesheet" href="design.css" />
+  <style>
+  </style>
+</head>
+<body class="VLayout">
+
+    <div>
+        <a href="#OGames">OGames</a>
+        <div class="modal" id="OGames">
+            <a class="modal__close " href="#"></a>
+            <div class="modal__content modalContainer   ">
+                <div class="modal__content__head ogames" style="text-align: center;">OGames</div>
+                <div class="modal__content__corp ogames">
+                    <div class="tabs">
+                        <input type="radio" name="tabs" id="tab1" checked="checked" hidden>
+                        <label for="tab1">Connection</label>
+                        <div class="tab">
+
+                            <div style="width: 100%;" class="VLayout">
+                                <label for="name" class=" inputLabel"> 
+                                  <input type="text" id="name" name="name" placeholder=""  class="input ">
+                                  <div class="lineripple"></div>
+                                  <span>Identifiant </span>
+                                </label>
+                            </div>	
+                            <div style="width: 100%;" class="VLayout">
+                                <label for="name" class=" inputLabel"> 
+                                  <input type="password" id="name" name="name" placeholder=""  class="input " minlength="8" required>
+                                  <div class="lineripple"></div>
+                                  <span>Mot de passe</span>
+                                </label>	
+                            </div>
+                            <a href="" style="margin-left: 10px; font-style: italic;">Mot de passe/Identifiant oubliés !</a>
+                            <div class="modal__content__foot ogames" style="background-color: white;">
+                                <span><button class="button-frame ogames">Valider</button></span>
+                            </div>  
+
+                        </div>
+                        <input type="radio" name="tabs" id="inscription" hidden>
+                        <label for="inscription">Inscription</label>
+                        <div class="tab">
+
+                            <div style="width: 100%;" class="VLayout">
+                                <label for="name" class=" inputLabel"> 
+                                  <input type="text" id="name" name="name" placeholder=""  class="input ">
+                                  <div class="lineripple"></div>
+                                  <span>Adresse mail </span>
+                                </label>
+                            </div>	
+                            <div style="width: 100%;" class="VLayout">
+                                <label for="name" class=" inputLabel"> 
+                                  <input type="text" id="name" name="name" placeholder=""  class="input ">
+                                  <div class="lineripple"></div>
+                                  <span>Identifiant </span>
+                                </label>
+                            </div>	
+                            <div style="width: 100%;" class="VLayout">
+                                <label for="name" class=" inputLabel"> 
+                                  <input type="password" id="name" name="name" placeholder=""  class="input " minlength="8" required>
+                                  <div class="lineripple"></div>
+                                  <span>Mot de passe</span>
+                                </label>	
+                            </div>
+                            <div style="width: 100%;" class="VLayout">
+                                <label for="name" class=" inputLabel"> 
+                                  <input type="password" id="name" name="name" placeholder=""  class="input " minlength="8" required>
+                                  <div class="lineripple"></div>
+                                  <span>Confirmation mot de passe </span>
+                                </label>	
+                            </div>
+                            <div class="modal__content__foot ogames" style="background-color: white;">
+                                <span><button class="button-frame ogames">Valider</button></span>
+                            </div>  
+                        </div>
+                      </div>
+                </div>
+                <a class="modal__content__close ogames" href="#">x</a>
+            </div>
+        </div>
+    </div>  
+
+  <script src="style.js"></script>
+</body>
+
+</html>

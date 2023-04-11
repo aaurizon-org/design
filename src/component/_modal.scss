@@ -41,6 +41,9 @@ $colorText-foot:#F06292;
         font-size: $sizeText-title;
         color: $colorText-title;
         background-color: $colorBack-head;
+        &.ogames{
+          background-color: #9147ff;
+        }
         padding: 20px;
         font-weight: bold;
         border-radius: 5px 5px 0 0px;
@@ -51,10 +54,16 @@ $colorText-foot:#F06292;
         color: $colorText;
         font-size: $sizeText;
         background:$back-content;
+        &.ogames{
+          background: #ede0ff;
+        }
       }
 
       &__foot{
         padding: 20px;
+        &.ogames{
+          color: #9147ff;
+        }
         color: $colorText-foot;
         background-color: $back-content;
         border-radius: 0 0 5px 5px;
@@ -76,6 +85,9 @@ $colorText-foot:#F06292;
         display: flex;
         justify-content: center;
         background: $colorBack-close;
+        &.ogames{
+          background-color: #9147ff;
+        }
         color: $colorText-close!important;  
       }
     }

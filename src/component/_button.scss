@@ -86,6 +86,14 @@ $animation-test: cubic-bezier(0.4, 0, 0.2, 1) !default;
           background-color: rgba(76, 175, 80,0.2);
         }
       }
+      &.ogames
+      {
+        border-color:#9147ff!important;
+        &:hover, &:active
+        {
+          background-color: lighten(#9147ff, 30);
+        }
+      }
       &.danger
       {
         border-color: rgb(244, 67, 54) !important;
