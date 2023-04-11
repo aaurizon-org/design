@@ -13,4 +13,250 @@
  * See the License for the specific language governing permissions and
  * limitations under the License.
  */
- 
+ @import "utilities/color";
+
+
+
+// STYLE HOME PAGE
+
+ h1{
+    font-size: 2.875rem!important;
+    line-height: 1.25!important;
+    color: $white!important;
+    margin-bottom: 1rem!important;
+    font-family: Titillium Web, -apple-system, system-ui, BlinkMacSystemFont, "Segoe UI", Arial, sans-serif!important;
+ }
+
+ .texte,h4,h2,div{
+    color: rgb(205,205,205)!important;
+ }
+
+.texte-purple{
+    color:  $colorsPurple10!important;
+}
+
+.homepage{
+    .card{
+        width: 25%;
+        cursor: pointer;
+        background-color:  rgba(33, 33, 33,1)!important;
+        img{
+            width:100%;
+            margin: 0 auto;
+        }
+        
+        .body{
+            color: azure;
+            background-color: black;
+            text-align: center;
+        }
+    
+        &:hover{
+            // margin-top: 50px;
+                --tw-translate-y: -0.25rem;
+                --tw-translate-x: 0;
+                // --tw-translate-y: 0;
+                --tw-rotate: 0;
+                --tw-skew-x: 0;
+                --tw-skew-y: 0;
+                --tw-scale-x: 1;
+                --tw-scale-y: 1;
+                transform: translateX(var(--tw-translate-x)) translateY(var(--tw-translate-y)) rotate(var(--tw-rotate)) skewX(var(--tw-skew-x)) skewY(var(--tw-skew-y)) scaleX(var(--tw-scale-x)) scaleY(var(--tw-scale-y));
+                transition-timing-function: cubic-bezier(0, 0, 0.2, 1);
+                transition-duration: 300ms;
+        }
+     }
+
+     .container2
+     {
+        justify-content: space-evenly;
+        margin-bottom: 80px;
+     }
+     .container3
+     {
+        background-color: black;
+        justify-content: space-evenly;
+        width: 70%;
+        padding: 80px;
+        margin-bottom: 80px;
+     }
+     .container4
+     {
+        text-align: center;
+     }
+}
+
+
+
+/////////////////////////////////////////  STYLE PAGE JEU ///////////////////////////////////////////
+body,main{
+    background-color: #222222!important;
+    transition-property: background-color;
+    transition-duration: .3s;
+    transition-timing-function: ease;
+}
+
+.pagegame{
+
+    #header
+    {
+        height: 320px;
+        overflow: hidden;
+        position: relative;
+    }
+
+    .headerMinecraft
+    {
+        bottom: 0;
+        position: absolute;
+        top: 0;
+        left: 0;
+        right: 0;
+    
+    
+        height: 320px;
+        background-image: url(utilities/minecraft_header.jpg);
+        background-position: center;    
+        background-repeat: no-repeat;    
+        background-size: cover;
+    
+        opacity: 0.56;
+    
+    
+        transform: scale(1);
+        animation-name: zoomOutAnimatedBackground;
+        animation-duration: 10s;
+        animation-timing-function: cubic-bezier(.3,0,.7,1);
+    }
+    
+    .headerArk
+    {
+        @extend .headerMinecraft;
+        background-image: url(utilities/ark_header.jpg);
+    }
+
+    .card
+    {
+        border: none;
+        .headercard
+        {
+            height: 180px;
+            background-color: $colorsPurple9;
+
+            .price{
+                position: relative;
+                top: 30px;
+                line-height: 1;
+                font-size: 60px;
+                letter-spacing: -.03em;
+                color:$white;
+            }
+            .month{
+                position: relative;
+                top: 30px;
+            }
+        }
+        .body{
+            text-align: center;
+        }
+        button{
+            margin: 40px auto;
+        }
+    }
+
+    .card{
+        .body{
+            height: 200px;
+        }
+    
+    }
+    .headercard
+    {
+        margin: 0;
+        padding: 40px;
+        text-align: center;
+    
+        .top-title
+        {
+            letter-spacing: .075em;
+            text-transform: uppercase;
+            color: white!important;
+        }
+    
+        &.pro{
+            background-color: $colorsPurple10 !important;
+            height: 220px!important;
+        }
+    }
+    
+    .headergame{
+        padding-left: 5%;
+        padding-right: 5%;
+        margin: 0 auto;
+        position: relative;
+    }
+    .headerright{
+        .text
+        {
+            margin: 0 0 20px;
+            color:  $white;
+            text-align: center!important;
+        }
+        button{
+            margin: auto;
+            margin-top: 30px;
+            background-color: #9147ff;
+        }
+    }
+    
+    .col4{
+        width: 33.33%;
+        margin: 20px;
+    }
+    
+    .containergame{
+    
+        padding: 80px 0px!important;
+        padding-left: 5%!important;
+        padding-right: 5%!important;
+    
+        text-align: center;
+    
+        .text-content-inner{
+            margin-bottom: 20px;
+        }
+    }
+    
+    .containerinfo{
+        margin-top: 60px;
+        p{
+            padding: 0;
+            margin: 0;
+            margin-bottom: 20px;
+        }
+        i{
+            color: #772ce8;
+        }
+    }
+}
+
+
+
+
+@keyframes zoomOutAnimatedBackground {
+    0% {
+        -webkit-transform: scale(1.2) translateZ(0);
+        -moz-transform: scale(1.2) translateZ(0);
+        -ms-transform: scale(1.2) translateZ(0);
+        -o-transform: scale(1.2) translateZ(0);
+        transform: scale(1.2) translateZ(0)
+    }
+
+    100% {
+        -webkit-transform: scale(1) translateZ(0);
+        -moz-transform: scale(1) translateZ(0);
+        -ms-transform: scale(1) translateZ(0);
+        -o-transform: scale(1) translateZ(0);
+        transform: scale(1) translateZ(0)
+    }
+}
