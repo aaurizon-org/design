@@ -7,11 +7,18 @@
     padding-top: 15px;
     padding-bottom: 30px;
     div{         
+        &:first-child{
+            text-align: center;
+        }
         color: rgba(white, 70%)!important;
         flex: 1;
-        text-align: center;
+        text-align: start;
         a
         {
+            &:hover:not(:first-child){
+                padding-left: 20px;
+                color: #9147ff!important;
+            }
             display: inline-block;
             padding: .5em;
             color: rgba(white, 70%)!important;
