@@ -9,6 +9,8 @@
     div{         
         &:first-child{
             text-align: center;
+            align-self: center;
+            font-size: 30px;
         }
         color: rgba(white, 70%)!important;
         flex: 1;
