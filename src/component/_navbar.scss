@@ -1,4 +1,3 @@
-
 //varible color
 $color-red: #F44336;
 $color-blue: #2196F3;
@@ -10,143 +9,157 @@ $color-purple: $colorsPurple;
 $color-grey: #9E9E9E;
 $color-brown: #795548;
 
-.navbar{
+.navbar {
     position: sticky;
-    top: 0;;
+    top: 0;
+    ;
     width: 100%;
     display: flex;
-    &.red{
+
+    &.red {
         background: $color-red;
     }
-    &.blue{
+
+    &.blue {
         background: $color-blue;
     }
-    &.green{
+
+    &.green {
         background: $color-green;
     }
-    &.pink{
+
+    &.pink {
         background: $color-pink;
     }
-    &.purple{
+
+    &.purple {
         background: $color-purple;
     }
-    &.yellow{
+
+    &.yellow {
         background: $color-yellow;
     }
-    &.orange{
+
+    &.orange {
         background: $color-orange;
     }
-    &.brown{
+
+    &.brown {
         background: $color-brown;
     }
-    &.grey{
+
+    &.grey {
         background: $color-grey;
     }
-    &.black{
+
+    &.black {
         background-color: black;
     }
 
-    .startNavbar,.endNavbar,.centerNavbar
-    {
+    .startNavbar,
+    .endNavbar,
+    .centerNavbar {
         padding: 16px;
         width: inherit;
         text-align: start;
         flex: 1;
 
-        li{
+        height: auto;
+        float: left;
+        list-style: none;
+        flex: 1;
+        
+        white-space: nowrap;
+
+        a{
+            color: #FFF!important;
+            text-align: center;
+            text-decoration: none;
+            margin: 0px 10px;
+            padding: 10px 10px;
+            display: block;
+            position: relative;
+            z-index: 0;
+            cursor: pointer;
+            &:hover{
+                color: $colorsPurple!important;
+            }
+        }
+
+        a:hover + .sousNavbar,
+        .sousNavbar:hover
+        {
+            display: block;
+        }
+
+        .dropdowngroup
+        {
+            position: relative;
+        }
+
+        .sousNavbar {
+
             height: auto;
-            float: left;
-            list-style: none;
-            flex: 1;
+            margin: 0;
+            padding: 0;
+            background: black;
+            display: none;
 
-            a{
-                color: #FFF!important;
-                text-align: center;
-                text-decoration: none;
-                font: 20px Raleway;
-                margin: 0px 10px;
-                padding: 10px 10px;
-                display: block;
-                position: relative;
-                z-index: 0;
-                cursor: pointer;
+            
+            position: absolute;
+            left: 0%;
+            top: 100%;
+            
+            @extend .VLayout;
+
+            white-space: nowrap;
+            a
+            {
+                text-align: left;
             }
-
-            &:hover .sousNavbar{
-                display: block;
-            }
-            .sousNavbar{
-                height: auto;
-                margin: 0;
-                padding: 0;
-                position: absolute;
-                background: black;
-                display: none;
-
-                a:before{
-                    position: absolute;
-                    width: 2px;
-                    height: 100%;
-                    top: 0px;
-                    left: 0px;
-                    content: '';
-                    background: $colorsPurple;
-                    opacity: 0.3;
-                    transition: all 0.3s;
-                }
-
-                a:hover:before
-                {
-                    width: 100%;
-                }
-                a{
-                    text-align: inherit;
-                }
-            }
-        } 
+        }
     }
 
-    .centerNavbar{
-        display:flex;
+    .centerNavbar {
+        display: flex;
         justify-content: center;
         flex: 4;
     }
 
-    .endNavbar{
-        display:flex;
+    .endNavbar {
+        display: flex;
         justify-content: end;
         flex: 1;
     }
-} 
-
-div.topBotomBordersOut{
-
-    li{
-        >a{
-            &::after{
-                position: absolute;
-                left: 0px;
-                width: 100%;
-                height: 2px;
-                background: #FFF;
-                content: "";
-                opacity: 0;
-                transition: all 0.3s;
-            }
-    
-            &:after
-            {   
-                bottom: 0px;
-                transform: translateY(-10px);
-            }
-    
-            &:hover::after{
-                opacity: 1;
-                transform: translateY(0px);
-            }
-        }
-    } 
 }
-div.ogames li>a::after{
+
+div.topBotomBordersOut {
+
+    >a,>div>a {
+        &::after {
+            position: absolute;
+            left: 0px;
+            width: 100%;
+            height: 2px;
+            background: $colorsPurple!important;
+            content: "";
+            opacity: 0;
+            transition: all 0.3s;
+        }
+
+        &:after {
+            bottom: 0px;
+            transform: translateY(-10px);
+        }
+
+        &:hover::after {
+            opacity: 1;
+            transform: translateY(0px);
+
+        }
+    }
+}
+
+div.ogames li>a::after {
     background: $colorsPurple;
 }

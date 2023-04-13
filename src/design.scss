@@ -19,7 +19,6 @@
 @import "colors";
 @import "functions";
 @import "mixins";
-@import "style";
 @import "reset/normalize";
 
 // Common - Content
@@ -83,7 +82,7 @@
 
 
 
-
+@import "style";
 
 
 

@@ -96,11 +96,11 @@ $animation-test: cubic-bezier(0.4, 0, 0.2, 1) !default;
         }
       }
       &.ogames{
-        border-color: $colorsPurple!important;
+        background-color: $colorsPurple5;
         color: white;
-        height: 100%;
+        width: 50%;
         &:hover,&:active{
-          background-color: $colorsPurple5;
+          background-color: $colorsPurple7;
         }
       }
     }

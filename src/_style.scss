@@ -13,4 +13,23 @@
  * See the License for the specific language governing permissions and
  * limitations under the License.
  */
- 
+ @import "utilities/color";
+
+.navbar{
+    align-items: center;
+    
+    text-transform: uppercase;
+    letter-spacing: .15rem;
+    font-size: .875rem;
+    font-weight: 600;
+    a
+    {
+        color: $white!important;
+    }
+    .centerNavbar
+    {
+        justify-content: space-around !important;
+
+
+     }
+}
