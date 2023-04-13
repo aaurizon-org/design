@@ -1,0 +1,173 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta charset="utf-8" />
+    <meta name="description" content="Sample of style library." />
+    <script src="https://kit.fontawesome.com/53ad689935.js" crossorigin="anonymous"></script>
+    <title>Sample</title>
+    <link rel="preconnect" href="https://fonts.gstatic.com">
+    <link rel="stylesheet"
+        href="https://fonts.googleapis.com/css2?family=Open+Sans:wght@300;400;700&family=Roboto:wght@300;400;500;700&display=swap">
+    <link rel="stylesheet" href="design.css" />
+    <style>
+    </style>
+</head>
+
+<body class="VLayout pageconfig">
+    <header id="HEADER">
+        <div class="VLayout Flexible headerConfig">
+        </div>
+        <div class=" HLayout Flexible headerConfig2">
+            <div style="padding: 0 30px;">
+                <img src="utilities/minecraft.jpg" alt="">
+            </div>
+            <div class="headerright VLayout">
+                <h1 class="">Minecraft Server</h1>
+            </div>
+        </div>
+    </header>
+    <main class="Container HLayout Flexible">
+        <div class=" VLayout Flexible">
+            <h2 class="titre">Configurer votre propre forfait </h2>
+            <div class=" HLayout Flexible containerSlot">
+                <div class="nombreServeur">
+                    200
+                </div>
+                <div class="VLayout Flexible ">
+                    <h4>Slots</h4>
+                    <p class="text-base">Les slots déterminent le nombre de joueurs pouvant jouer sur le serveur en même
+                        temps. Vous pouvez augmenter votre serveur de jeu à l'avenir, mais il est judicieux de planifier
+                        généreusement dès le début.</p>
+                    <div class="slider">
+                        <input type="range" min="0" max="100" step="1" value="50" />
+                    </div>
+                </div>
+            </div>
+            <div class=" HLayout Flexible containerSlot">
+                <div class="nombreServeur">
+                    365
+                </div>
+                <div class="VLayout Flexible ">
+                    <h4>Jours Durée de fonctionnement </h4>
+                    <p class="text-base">Vous pouvez renouveler votre offre à tout moment. En outre, vous pouvez limiter
+                        la durée de l'offre.</p>
+                    <div class="slider">
+                        <input type="range" min="0" max="100" step="1" value="50" />
+                    </div>
+                </div>
+            </div>
+            <div class=" VLayout Flexible containerSlot">
+                <p class="text-base">En vous abonnant, votre serveur sera automatiquement renouvelé. Ne vous inquiétez
+                    pas, vous pouvez annuler votre serveur à tout moment si vous le souhaitez.
+                </p>
+                <div class="switch-button">
+                    <input class="switch-button-checkbox" type="checkbox"></input>
+                    <label class="switch-button-label" for=""><span
+                            class="switch-button-label-span">Abonnement</span></label>
+                </div>
+            </div>
+            <div class=" VLayout Flexible containerSlot">
+                <h4 class="title2">Où votre serveur doit-il être hébergé ?</h4>
+                <div class="tabs">
+                    <input type="radio" name="tabs" id="tab1" checked="checked" hidden>
+                    <label for="tab1">PARIS<p>France</p></label>
+
+                    <input type="radio" name="tabs" id="tab2" hidden>
+                    <label for="tab2">FRANKFORT</label>
+                    <input type="radio" name="tabs" id="tab3" hidden>
+                    <label for="tab3">LONDON</label>
+                    <input type="radio" name="tabs" id="tab4" hidden>
+                    <label for="tab4">MADRID</label>
+                </div>
+            </div>
+            <div class="VLayout Flexible containerSlot">
+                <h4 class="title2"> Frequently asked questions</h4>
+                <details>
+                    <summary> Who can play on my dedicated Minecraft Vanilla server?</summary>
+                    <p>You can invite your friends, family, and anyone who owns Minecraft to join your server and experience a Minecraft adventure together.
+                    </p>
+                  </details>
+                  <details>
+                    <summary>What version of Minecraft do I need to play on Nitrado servers?</summary>
+                    <p>The version you will need depends on which platform you have Minecraft on. Mobile IOS & Android gamers can play on Minecraft: Bedrock Edition servers, while PC players can play on Java Edition servers.</p>
+                  </details>
+                  <details>
+                    <summary>Do you offer modded Minecraft server hosting?</summary>
+                    <p>Minecraft mods can be added to your Minecraft server at any time. Using the Switch Game feature on Nitrado servers, you can easily change between many different modpacks.
+                    </p>
+                </details>
+                <details>
+                    <summary>Do you support The Wild Update, Caves & Cliffs or other updates on your Minecraft servers?</summary>
+                    <p>Your Nitrado Minecraft server supports every release version of Minecraft. You can switch between these versions at any time.
+                    </p>
+                </details>
+                <details>
+                    <summary>Can I secure my Minecraft server with a password?</summary>
+                    <p>While a Minecraft server does not support password security, your server supports a whitelist option to make the server private. Enabling the whitelist adds a list to your server that only allows players to only join if they are on that list.
+                    </p>
+                </details>
+            </div>
+
+
+        </div>
+        <div class="sticky ">
+            <div class="VLayout Flexible">
+
+                <div class="HLayout Flexible" style="padding: 0px;">
+                    <img src="https://static.nitrado.net/cdn/content_files/production/games/dayz/gamecovers/dayz-preview.jpg"
+                        alt="DayZ" class="-mt-12 h-36 w-auto shadow-lg">
+                    <div class="VLayout Flexible" style="padding: 0px;">
+                        <span class="slot">52 Slots </span>
+                        <span class="price">132,89 € </span>
+                    </div>
+                </div>
+
+                <div class="HLayout Flexible">
+                    <div class="VLayout Flexible description">
+                        <span class="title">
+                            Type de paiement
+                        </span>
+                        <div class="contenu" style=" margin-top: 23px;">
+                            Abonnement
+                        </div>
+                    </div>
+                    <div class="VLayout Flexible description">
+                        <span class="title">
+                            Durée de fonctionnement
+                        </span>
+                        <div class="contenu">
+                            90 Jours
+                        </div>
+                    </div>
+                </div>
+                <div class="HLayout Flexible">
+                    <div class="VLayout Flexible description">
+                        <span class="title">
+                            Plateforme
+                        </span>
+                        <div class="contenu">
+                            PC
+                        </div>
+                    </div>
+                    <div class="VLayout Flexible description">
+                        <span class="title">
+                            Emplacement
+                        </span>
+                        <div class="contenu">
+                            PARIS
+                        </div>
+                    </div>
+                </div>
+                <div class="HLayout Flexible">
+                    <button>Choisir cette configuration</button>
+                </div>
+
+            </div>
+
+        </div>
+    </main>
+</body>
+
+</html>

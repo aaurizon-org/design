@@ -17,7 +17,16 @@
 
 
 
-// STYLE HOME PAGE
+ body,main{
+    background-color: $black!important;
+    transition-property: background-color;
+    transition-duration: .3s;
+    transition-timing-function: ease;
+}
+
+////////////////////////////////// STYLE HOME PAGE /////
+/// 
+/// 
 
  h1{
     font-size: 2.875rem!important;
@@ -89,12 +98,10 @@
 
 
 /////////////////////////////////////////  STYLE PAGE JEU ///////////////////////////////////////////
-body,main{
-    background-color: #222222!important;
-    transition-property: background-color;
-    transition-duration: .3s;
-    transition-timing-function: ease;
-}
+/// 
+/// 
+/// 
+
 
 .pagegame{
 
@@ -185,7 +192,7 @@ body,main{
     
         &.pro{
             background-color: $colorsPurple10 !important;
-            height: 220px!important;
+            height: 201px!important;
         }
     }
     
@@ -258,5 +265,249 @@ body,main{
         -ms-transform: scale(1) translateZ(0);
         -o-transform: scale(1) translateZ(0);
         transform: scale(1) translateZ(0)
+    }
+}
+
+
+
+//////////////////////////// PAGE CONFIG /////////////
+/// 
+/// 
+/// 
+
+.pageconfig{
+    main {
+        background-color: $black2!important;
+    }
+
+    #header
+    {
+        height: 320px;
+        overflow: hidden;
+        position: relative;
+    }
+
+    .headerConfig
+    {
+        bottom: 0;
+        position: absolute;
+        top: 0;
+        left: 0;
+        right: 0;
+    
+        height: 320px;
+        background-position: center;    
+        background-repeat: no-repeat;    
+        background-size: cover;
+    
+        opacity: 0.56;
+        background-image: url(utilities/teamspeak_header.jpg);
+        filter: blur(5px);
+    }
+
+    .headerConfig2{
+        padding-left: 5%;
+        padding-right: 5%;
+        margin: 0 auto;
+        position: relative;
+    }
+
+    .titre{
+        font-size: 3.25rem;
+        margin-bottom: 30px;
+        letter-spacing: -.075rem;
+        font-weight: 400;
+    }
+
+    .containerSlot{
+        background: $black2;
+        margin-bottom: 20px;
+        padding: 20px;
+
+        .slider{
+            width: 100%;
+        }
+
+        input[type=range] 
+        {
+            background-color: $black2;
+
+            &::-webkit-slider-runnable-track 
+            {
+                border-radius: 0px;
+                background: $colorsPurple7;
+            }
+        }
+        .nombreServeur{
+            text-align: right;
+            width: 10rem;
+            font-size: 6rem;
+            line-height: 1;
+        }
+        h4{
+            font-size: 2rem;
+        }
+        p{
+            color: $grey500;
+        }
+        .VLayout{
+            margin-left: 2rem;
+        }
+        .title2
+        {
+            margin-bottom: 0.75rem;
+
+            font-weight: 400;
+            line-height: 1.25;
+            letter-spacing: -.075rem;
+            font-size: 2rem;
+        }
+
+
+        .tabs label 
+        {
+            flex-direction: column;
+            margin-right: 20px;
+
+            background: $colorsPurple8;
+            background: none;
+
+            letter-spacing: .15rem;
+            font-weight: 600;
+            font-size: 0.75rem;
+            line-height: 1rem;
+            
+
+            p{
+                margin: 0;
+            }
+        }
+        .tabs input[type=radio]:checked + label {
+            background: $colorsPurple6;
+            color: #FFEB3B;
+            border-bottom: 1px solid $colorsPurple5;
+        }
+        
+        .tabs label:hover {
+            background-color:  $colorsPurple4;
+            color: #FFEB3B;
+            border-bottom: 0px;
+        }
+
+        details
+        {
+            background-color: transparent;
+            border: 0!important;
+
+            &[open] summary
+            {
+                box-shadow: none;
+            }
+            summary
+            {
+                box-shadow: none;
+
+                padding-top: 1.5rem;
+                padding-bottom: 1.5rem;
+
+                color: white;
+                background-color: transparent;
+                font-weight: 600;
+                border: 0!important;
+                font-size: 1.25rem;
+            }
+            p{
+                border-bottom: 1px solid;
+                padding-bottom: 1rem;
+                padding-top: 0;
+                margin: 0;
+            }
+        }
+    }
+
+    .sticky{
+        display: flex;
+        align-self: flex-start;
+
+        margin-left: 5rem;
+        top: 7rem;
+
+        position: sticky;
+
+        // border-color: $colorsPurple7;
+        box-sizing: border-box;
+        border-style: solid;
+
+
+        padding-top: 1.5rem;
+        padding-bottom: 1.5rem;
+        padding-left: 1rem;
+        padding-right: 1rem;
+
+        background-color: rgba(28, 28, 28, 1);
+        border-color: rgba(124, 58, 237, 1);
+        border-width: 2px;
+        width: 24.5rem;
+
+        .slot
+        {
+            display: inline-block;
+
+            padding-left: 1rem;
+            padding-right: 1rem;
+            padding-top: 0.125rem;
+            padding-bottom: 0.125rem;
+            margin-top: 0.25rem;
+
+            font-size: 1.125rem;
+            font-weight: 600;
+
+            background-color: rgba(124, 58, 237, 1);
+            border-color: rgba(139, 92, 246, 1);
+
+            border-width: 2px;
+            border-radius: 9999px;
+        }
+        .price
+        {
+            font-size: 2.875rem;
+            font-weight: 700;
+            letter-spacing: -.075rem;
+            color: $white;
+        }
+
+        img
+        {
+            display: block;
+            margin-top: -3rem;
+            height: 9rem;
+            max-width: 100%;
+            +div{
+                margin-left: 1.25rem;
+            }
+        }
+        .description
+        {
+            margin-top: 1rem;
+
+            .title{
+                color : $grey500;
+                font-size: .875rem;
+                font-weight: 600;
+            }
+            .contenu{
+                padding-left: 1rem;
+                padding-right: 1rem;
+                border-color: rgba(42, 42, 42,1);
+                border-width: 1px;
+                border-style: solid;
+
+                align-items: center;
+                height: 3rem;
+                margin-top: 0.25rem;
+                display: flex;
+            }
+        }
+
     }
 }
