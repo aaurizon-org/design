@@ -1,64 +1,22 @@
-.bg-opacity-10 {
-  --bg-opacity: 0.1;
-}
+$colorsPurple:#9147ff;
+$colorsPurple1:#040109;
+$colorsPurple2:#0d031c;
+$colorsPurple3:#15052e;
+$colorsPurple4:#24094e;
+$colorsPurple5:#330c6e;
+$colorsPurple6:#451093;
+$colorsPurple7:#5c16c5;
+$colorsPurple8:#772ce8;
+$colorsPurple9:#9147ff;
+$colorsPurple10:#a970ff;
+$colorsPurple11:#bf94ff;
+$colorsPurple12:#d1b3ff;
+$colorsPurple13:#e3d1ff;
+$colorsPurple14:#ede0ff;
+$colorsPurple15:#f3ebff;
 
-.bg-opacity-25 {
-  --bg-opacity: 0.25;
-}
-
-.bg-opacity-50 {
-  --bg-opacity: 0.5;
-}
-
-.bg-opacity-75 {
-  --bg-opacity: 0.75;
-}
-
-.bg-opacity-100 {
-  --bg-opacity: 1;
-}
-
-.background-color-primary {
-   background-color: rgb(0, 45, 128, var(--bg-opacity, 1)) !important;
-  }
-
-  .background-color-secondary {
-   background-color: rgb(108, 117, 125, var(--bg-opacity, 1)) !important;
-  }
-  
-  .background-color-success {
-   background-color: rgb(25, 135, 84, var(--bg-opacity, 1)) !important;
-  }
-  
-  .background-color-info {
-   background-color: rgb(13, 202, 240, var(--bg-opacity, 1)) !important;
-  }
-  
-  .background-color-warning {
-   background-color: rgb(255, 193, 7, var(--bg-opacity, 1)) !important;
-  }
-  
-  .background-color-danger {
-   background-color: rgb(220, 53, 69, var(--bg-opacity, 1)) !important;
-  }
-  
-  .background-color-light {
-   background-color: rgb(248, 249, 250, var(--bg-opacity, 1)) !important;
-  }
-  
-  .background-color-dark {
-   background-color: rgb(33, 37, 41, var(--bg-opacity, 1)) !important;
-  }
-  
-  .background-color-body {
-   background-color: rgb(255, 255, 255, var(--bg-opacity, 1)) !important;
-  }
-  
-  .background-color-white {
-   background-color: rgb(255, 255, 255, var(--bg-opacity, 1)) !important;
-  }
-  
-  .background-color-transparent {
-   background-color: transparent !important;
-  }
-
+$grey:rgb(205, 205, 205);
+$grey500: rgba(131, 131, 131,1);
+$white:#f1f1f1;
+$black: #000000;
+$black2: #222222;
