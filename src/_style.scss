@@ -511,3 +511,28 @@
 
     }
 }
+
+
+//////////////////////////// PAGE CG /////////////
+/// 
+/// 
+/// 
+/// 
+.pageCG
+{
+    line-height: 1.78571;
+    main{
+        background-color: $white !important;
+    }
+    div{
+        color: $black!important;
+
+    }
+    h2
+    {
+        color: $black!important;
+        font-weight: 500;
+        font-size: 36px;
+    }
+}
+
