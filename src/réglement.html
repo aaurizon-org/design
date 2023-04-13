@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta charset="utf-8" />
+  <meta name="description" content="Sample of style library." />
+  <script src="https://kit.fontawesome.com/53ad689935.js" crossorigin="anonymous"></script>
+  <title>Réglement achat</title>
+  <link rel="preconnect" href="https://fonts.gstatic.com">
+  <link rel="stylesheet"
+    href="https://fonts.googleapis.com/css2?family=Open+Sans:wght@300;400;700&family=Roboto:wght@300;400;500;700&display=swap">
+  <link rel="stylesheet" href="design.css" />
+  <style>
+  </style>
+</head>
+<body class="VLayout">
+    <div class="HLayout">
+        <div style="width: 66%; margin-right: 1%;" class="container-commande">
+            <div >
+                <div class="commande">S'il vous plaît sélectionner le mode de paiement.</div> 
+                <div class="HLayout">
+                    <label class="rad-label">
+                        <i class="fa-regular fa-credit-card"></i>&nbsp;
+                        <input type="radio" class="rad-input" name="rad" checked>
+                        <div class="rad-design"></div>
+                        <div class="rad-text">MasterCard</div>
+                    </label>
+                    <label class="rad-label">
+                        <i class="fa-regular fa-credit-card"></i>&nbsp;
+                        <input type="radio" class="rad-input" name="rad">
+                        <div class="rad-design"></div>
+                        <div class="rad-text">Paysafecard</div>
+                    </label>
+                    <label class="rad-label">
+                        <i class="fa-regular fa-credit-card"></i>&nbsp;
+                        <input type="radio" class="rad-input" name="rad">
+                        <div class="rad-design"></div>
+                        <div class="rad-text">Visa</div>
+                    </label>
+                    <label class="rad-label">
+                        <i class="fa-regular fa-credit-card"></i>&nbsp;
+                        <input type="radio" class="rad-input" name="rad">
+                        <div class="rad-design"></div>
+                        <div class="rad-text">PayPal</div>
+                    </label>
+                </div>
+                <div><button class="button-frame ogames" style="width: max-content;">Valider</button></div>
+            </div>
+        </div>
+    
+        <!-- pagnier -->
+        <div style="width: 33%;"class="container-commande">
+            <div class="commande">Panier</div>
+            <div><h4>Standard</h4></div>
+            <div class="recap-achat">
+                <div>Frais mensuels</div>
+                <div >0€00</div>
+            </div>
+            <div class="recap-achat">
+                <div>Frais d'installation</div>
+                <div >0€00</div>
+            </div>
+            <div class="recap-achat">
+                <div>Avoirs de la commande</div>
+                <div >0€00</div>
+            </div>
+            <div class="recap-achat">
+                <div>Montant total à payer*</div>
+                <div ><h3 style="margin: 0;">0€00</h3></div>
+            </div>
+            <div class="recap-achat" style="color: grey;">
+                <div>*Montant TVA (19%)</div>
+                <div >0€00</div>
+            </div>
+        </div>
+    </div>
+
+    
+  <script src="style.js"></script>
+</body>
+
+</html>
