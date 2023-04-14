@@ -14,3 +14,33 @@
  * limitations under the License.
  */
  
+$colorFontChecked:#9147ff;
+$colorHeadChecked:white;
+$colorTabs:white;
+$borderBot:1px;
+
+ .tabs >label{
+  
+  margin-right: 0!important;
+  background: lighten($colorFontChecked, 30)!important;
+  border-bottom: $borderBot solid $colorFontChecked!important;
+  &:hover{
+    background: lighten($colorFontChecked, 30)!important;
+    color: $colorFontChecked!important;
+    border-bottom: $borderBot solid $colorFontChecked!important;
+  }
+ }
+
+.tabs input[type="radio"]:checked+label{
+  background-color: white!important;
+  color: black!important;
+  border-bottom: $borderBot solid transparent!important;
+}
+.modal__content{
+  &__head, &__close{
+    background-color: #9147ff!important;
+  }
+  &__corp{
+    background-color: #ede0ff!important; 
+  }
+}
