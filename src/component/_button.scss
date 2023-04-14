@@ -95,14 +95,6 @@ $animation-test: cubic-bezier(0.4, 0, 0.2, 1) !default;
           color: black;
         }
       }
-      &.ogames{
-        background-color: $colorsPurple5;
-        color: white;
-        width: 50%;
-        &:hover,&:active{
-          background-color: $colorsPurple7;
-        }
-      }
     }
     
     &.button-flat

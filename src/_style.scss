@@ -25,11 +25,21 @@
     a
     {
         color: $white!important;
+        &:hover{
+            color: $colorsPurple!important;
+        }
     }
-    .centerNavbar
+    button
     {
-        justify-content: space-around !important;
+        background-color: $colorsPurple5;
+        color: white;
+        width: 50%;
+        &:hover{
+          background-color: $colorsPurple7;
+        }
+        &:active{
+          background-color: $colorsPurple8;
+        }
+    }
 
-
-     }
 }

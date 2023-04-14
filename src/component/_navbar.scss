@@ -1,82 +1,38 @@
-//varible color
-$color-red: #F44336;
-$color-blue: #2196F3;
-$color-green: #4CAF50;
-$color-pink: #E91E63;
-$color-yellow: #FFEB3B;
-$color-orange: #FF9800;
-$color-purple: $colorsPurple;
-$color-grey: #9E9E9E;
-$color-brown: #795548;
-
-.navbar {
+$colorNavbar:$black;
+.navbar 
+{
     position: sticky;
     top: 0;
-    ;
     width: 100%;
     display: flex;
+    background-color: $colorNavbar;
+    justify-content: space-between;
+    >div:nth-child(1)
+    {
+        display: flex;
+        width: 20%;
+        justify-content: center;
 
-    &.red {
-        background: $color-red;
     }
-
-    &.blue {
-        background: $color-blue;
+    >div:nth-child(2)
+    {
+        width: 60%;
+        display: flex;
     }
-
-    &.green {
-        background: $color-green;
-    }
-
-    &.pink {
-        background: $color-pink;
-    }
-
-    &.purple {
-        background: $color-purple;
-    }
-
-    &.yellow {
-        background: $color-yellow;
-    }
-
-    &.orange {
-        background: $color-orange;
-    }
-
-    &.brown {
-        background: $color-brown;
-    }
-
-    &.grey {
-        background: $color-grey;
-    }
-
-    &.black {
-        background-color: black;
-    }
-
-    .startNavbar,
-    .endNavbar,
-    .centerNavbar {
-        padding: 16px;
-        width: inherit;
-        text-align: start;
-        flex: 1;
-
-        height: auto;
-        float: left;
-        list-style: none;
-        flex: 1;
+    >div:nth-child(3){
+        width: 20%;
         
+        display: flex;
+    }
+    >div {
         white-space: nowrap;
 
         a{
-            color: #FFF!important;
+            color: $white!important;
             text-align: center;
             text-decoration: none;
             margin: 0px 10px;
-            padding: 10px 10px;
+            padding: 16px 10px;
             display: block;
             position: relative;
             z-index: 0;
@@ -86,10 +42,11 @@ $color-brown: #795548;
             }
         }
 
-        a:hover + .sousNavbar,
-        .sousNavbar:hover
+        a:hover + .sousMenu,
+        .sousMenu:hover
         {
             display: block;
+
         }
 
         .dropdowngroup
@@ -97,12 +54,12 @@ $color-brown: #795548;
             position: relative;
         }
 
-        .sousNavbar {
+        .sousMenu {
 
             height: auto;
             margin: 0;
             padding: 0;
-            background: black;
+            background: $colorNavbar;
             display: none;
 
             
@@ -119,22 +76,8 @@ $color-brown: #795548;
             }
         }
     }
-
-    .centerNavbar {
-        display: flex;
-        justify-content: center;
-        flex: 4;
-    }
-
-    .endNavbar {
-        display: flex;
-        justify-content: end;
-        flex: 1;
-    }
 }
-
-div.topBotomBordersOut {
-
+div.ligneHover {
     >a,>div>a {
         &::after {
             position: absolute;
@@ -158,8 +101,4 @@ div.topBotomBordersOut {
 
         }
     }
-}
-
-div.ogames li>a::after {
-    background: $colorsPurple;
 }
