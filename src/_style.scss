@@ -536,3 +536,36 @@
     }
 }
 
+//////////////////////////// NAVBAR /////////////
+/// 
+/// 
+/// 
+/// 
+.navbar{
+    align-items: center;
+    
+    text-transform: uppercase;
+    letter-spacing: .15rem;
+    font-size: .875rem;
+    font-weight: 600;
+    a
+    {
+        color: $white!important;
+        &:hover{
+            color: $colorsPurple!important;
+        }
+    }
+    button
+    {
+        background-color: $colorsPurple5;
+        color: white;
+        width: 50%;
+        &:hover{
+          background-color: $colorsPurple7;
+        }
+        &:active{
+          background-color: $colorsPurple8;
+        }
+    }
+
+}
