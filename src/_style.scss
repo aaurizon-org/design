@@ -13,19 +13,17 @@
  * See the License for the specific language governing permissions and
  * limitations under the License.
  */
- #FOOTER
+ .link
 {
-  @extend .HLayout;
-
   padding: .5em;
-  background: black;
+  background: $black;
   justify-content: center;
   width: 100%;
-  a
-  {
-    display: inline-block;
-    padding: .5em;
-    color: rgba(white, 70%);
-    font-style: italic;
-  }
+    a
+    {
+      display: inline-block;
+      padding: .5em;
+      color: rgba($white, 70%)!important;
+      font-style: italic;
+    }
 }

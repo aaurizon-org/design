@@ -15,6 +15,7 @@
  * limitations under the License.
  */
 
+@import "utilities/color";
 // Base
 @import "functions";
 @import "mixins";
@@ -33,7 +34,6 @@
 //@import "common/grid";
 //@import "common/table";
 
-@import "utilities/color";
 
 // Component
 @import "component/button";
