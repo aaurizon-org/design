@@ -15,6 +15,7 @@
  * limitations under the License.
  */
 
+@import "utilities/color";
 // Base
 @import "functions";
 @import "mixins";
@@ -22,7 +23,6 @@
 
 // Common - Content
 @import "common/typography";
-//@import "common/typography";
 //@import "common/image";
 //@import "common/icon";
 //@import "common/form";
@@ -33,7 +33,6 @@
 //@import "common/grid";
 //@import "common/table";
 
-@import "utilities/color";
 
 // Component
 @import "component/button";
@@ -79,7 +78,7 @@
 @import "component/tooltip";
 
 
-
+@import "component/footer";
 
 @import "style";
 
