@@ -36,7 +36,7 @@ $borderBot:1px;
   color: black!important;
   border-bottom: $borderBot solid transparent!important;
 }
-.modal__content{
+.modal .content{
   &__head, &__close{
     background-color: #9147ff!important;
   }
@@ -44,3 +44,37 @@ $borderBot:1px;
     background-color: #ede0ff!important; 
   }
 }
+//CSS BUTTON GLOBAL
+button.button-frame 
+{
+  border-color:#9147ff!important;
+  &:hover
+  {
+    background-color: lighten(#9147ff, 30)!important;
+  }
+  &:active{
+    background-color: lighten(#9147ff, 20)!important
+  }
+}
+.modal.content.tabs.tab div{
+  width:100%;}
+
+
+  ////MOT DE PASSE OUBLIER STYLE/////
+  .MDPO{
+    div{
+      margin: auto;
+      div{
+        width: 1000px; 
+        padding: 0 ;
+        +div{
+          display: flex; 
+          margin-top: 10px;
+          button {
+            width: 150px;
+            margin-right: 5px;
+          }
+        }
+      }
+    }
+  }
