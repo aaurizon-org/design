@@ -18,8 +18,27 @@
     color: red;
  }
  .container-commande{
+  &:first-child{
+    width: 66%; 
+    margin-right: 1%;
+  }
+  &.panier{
+    width: 33%; 
+  }
     padding: 10px;
     border-radius: 10px;
+    div .rad-label{
+      margin: 0;
+      width: 25%;
+      padding-top: 10px;
+      margin-bottom: 20px;
+      div{
+        margin-left: 4px;
+      }
+      .rad-design{
+        margin-left: 15px;
+      }
+    }
     >div{
         
     background-color: white;
@@ -34,7 +53,7 @@
         }
         box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px;
     }
-    div div .HLayout{
+    div .HLayout{
         padding: initial;
     }
     .commande{
@@ -45,9 +64,15 @@
         ~div{
             padding: 15px;
         }
+        +div{
+          flex-wrap: wrap;
+        }
     }
  }
 .recap-achat{
     display: flex; 
     justify-content: space-between;
+    &:last-child div{
+      color: gray;
+    }
 }
