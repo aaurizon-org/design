@@ -23,16 +23,16 @@
     >div{
         
     background-color: white;
-        
-        &:first-child{
-            border-top-right-radius: 10px;
-            border-top-left-radius: 10px;
-        }
-        &:last-child{
-            border-bottom-right-radius: 10px;
-            border-bottom-left-radius: 10px;
-        }
-        box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px;
+      
+    &:first-child{
+      border-top-right-radius: 10px;
+      border-top-left-radius: 10px;
+    }
+    &:last-child{
+      border-bottom-right-radius: 10px;
+      border-bottom-left-radius: 10px;
+    }
+    box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px;
     }
     div div .HLayout{
         padding: initial;
@@ -40,8 +40,6 @@
     .commande{
         background-color: #ede0ff;
         padding: 10px;
-        border-top-right-radius: inherit;
-        border-top-left-radius: inherit;
         ~div{
             padding: 15px;
         }
@@ -50,4 +48,33 @@
 .recap-achat{
     display: flex; 
     justify-content: space-between;
+}
+
+.NoPDL{
+  padding-left: 0!important;
+}
+.NoPDR{
+  padding-right: 0!important;
+}
+///////////////////////////////////////////// Classe Css global ///////////////////////////
+/// 
+/// 
+/// 
+/// 
+
+
+$col-size: 12;
+$col-spacing: 1em;
+
+
+.col
+{
+  @for $i from 1 through $col-size
+  {
+    &#{$i}
+    {
+       $pourcentage: percentage( $i / 12);
+      width:  $pourcentage;
+    }
+  }
 }
