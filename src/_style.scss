@@ -671,3 +671,66 @@ button.button-frame
       }
     }
   }
+ .required::after{
+    content: "*";
+    color: red;
+ }
+ .container-commande{
+  &:first-child{
+    width: 66%; 
+    margin-right: 1%;
+  }
+  &.panier{
+    width: 33%; 
+  }
+    padding: 10px;
+    border-radius: 10px;
+    div .rad-label{
+      margin: 0;
+      width: 25%;
+      padding-top: 10px;
+      margin-bottom: 20px;
+      div{
+        margin-left: 4px;
+      }
+      .rad-design{
+        margin-left: 15px;
+      }
+    }
+    >div{
+        
+    background-color: white;
+        
+        &:first-child{
+            border-top-right-radius: 10px;
+            border-top-left-radius: 10px;
+        }
+        &:last-child{
+            border-bottom-right-radius: 10px;
+            border-bottom-left-radius: 10px;
+        }
+        box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px;
+    }
+    div .HLayout{
+        padding: initial;
+    }
+    .commande{
+        background-color: #ede0ff;
+        padding: 10px;
+        border-top-right-radius: inherit;
+        border-top-left-radius: inherit;
+        ~div{
+            padding: 15px;
+        }
+        +div{
+          flex-wrap: wrap;
+        }
+    }
+ }
+.recap-achat{
+    display: flex; 
+    justify-content: space-between;
+    &:last-child div{
+      color: gray;
+    }
+}
