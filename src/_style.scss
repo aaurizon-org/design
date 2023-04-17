@@ -606,3 +606,68 @@
     }
  }
  
+ 
+$colorFontChecked:#9147ff;
+$colorHeadChecked:white;
+$colorTabs:white;
+$borderBot:1px;
+
+ .tabs >label{
+  
+  margin-right: 0!important;
+  background: lighten($colorFontChecked, 30)!important;
+  border-bottom: $borderBot solid $colorFontChecked!important;
+  &:hover{
+    background: lighten($colorFontChecked, 30)!important;
+    color: $colorFontChecked!important;
+    border-bottom: $borderBot solid $colorFontChecked!important;
+  }
+ }
+
+.tabs input[type="radio"]:checked+label{
+  background-color: white!important;
+  color: black!important;
+  border-bottom: $borderBot solid transparent!important;
+}
+.modal .content{
+  &__head, &__close{
+    background-color: #9147ff!important;
+  }
+  &__corp{
+    background-color: #ede0ff!important; 
+  }
+}
+//CSS BUTTON GLOBAL
+button.button-frame 
+{
+  border-color:#9147ff!important;
+  &:hover
+  {
+    background-color: lighten(#9147ff, 30)!important;
+  }
+  &:active{
+    background-color: lighten(#9147ff, 20)!important
+  }
+}
+.modal.content.tabs.tab div{
+  width:100%;}
+
+
+  ////MOT DE PASSE OUBLIER STYLE/////
+  .MDPO{
+    div{
+      margin: auto;
+      div{
+        width: 1000px; 
+        padding: 0 ;
+        +div{
+          display: flex; 
+          margin-top: 10px;
+          button {
+            width: 150px;
+            margin-right: 5px;
+          }
+        }
+      }
+    }
+  }
