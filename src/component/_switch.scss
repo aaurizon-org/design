@@ -60,12 +60,6 @@ form input[type="checkbox"] {
     }
 }
 
-input:checked[type="checkbox"] {
-    background: $colorSwitch-checked!important;
-    &::after {
-    @include cercleChecked();
-    }
-}
 
 //radio
 .switch {
@@ -102,12 +96,31 @@ input:checked[type="checkbox"] {
 	#off:checked~.zone .cercle {
         @include cercleChecked();
         
-    box-shadow: inset 0 0 5px rgba(0, 0, 0, 0.2);
+    box-shadow: inset 0 0 5px rgba(255, 255, 255, 0.2);
 	}
 
 	#off:checked~.zone {
 		background-color: $colorSwitch-checked;
 	}
+    //checkbox
+    input[type="checkbox"] {
+        @include zone();
+        appearance: none;
+        cursor: pointer;
+        
+        &::after {
+            content: "";
+            @include cercle();
+            transform: scale(1.1);//taille
+        }
+    }
+
+    input:checked[type="checkbox"] {
+        background: $colorSwitch-checked!important;
+        &::after {
+        @include cercleChecked();
+        }
+    }
 }
 
 
