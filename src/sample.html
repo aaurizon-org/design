@@ -16,30 +16,56 @@
 </head>
 
 <body class="VLayout" style="background-color: black">
+  <div class="navbar blue">
+    <div>
+      <a href="">OGames</a>
+    </div>
+    <div class="ligneHover">
+      <div class="dropdowngroup">
+        <a href="" class="">Produits</a>
+        <div class="sousMenu">
+          <a href="minecraft.html">Minecraft</a>
+          <a href="ark.html">Ark: Survival Evolved</a>
+        </div>
+      </div>
+      <a href="">Entreprise</a>
+      <a href="">Support</a>
+    </div>
+    <div class="ligneHover">
+      <div class="dropdowngroup">
+        <a href="">Fr | €</a>
+        <div class="sousMenu">
+          <a href="">Gb | £</a>
+          <a href="">Us | $</a>
+          <a href="">De | €</a>
+          <a href="">Br | €</a>
+          <a href="">It | €</a>
+          <a href="">Nl | €</a>
+          <a href="">Pl | €</a>
+          <a href="">Ru | ₽</a>
+          <a href="">Cn | Ұ</a>
+          <a href="">Jp | Ұ</a>
+        </div>
+      </div>
+      <button class="button-frame " style="margin: 8px;">Connection</button>
+    </div>
+  </div>
   <main class="Container HLayout Flexible homepage">
     <div class="VLayout Flexible">
       <div>
 
-        <div class="HLayout Flexible" style="justify-content: space-evenly;color:azure">
+        <div class="HLayout Flexible" style="justify-content: space-evenly;color:azure" id="produit">
           <h1>Les derniers jeux</h1>
         </div>
         <div class="HLayout Flexible container2">
-          <div class="card" style="margin-bottom: 1rem">
+          <div class="card">
             <img src="utilities/minecraft.jpg" alt="Logo HubSpot" />
-            <title>Placeholder</title>
-            <rect width="100%" height="100%" fill="#868e96"></rect><text x="50%" y="50%" fill="#dee2e6"
-              dy=".3em"></text>
-            </svg>
             <div class="body">
               <p class="text">à partir de 4,49 Euro / mois</p>
             </div>
           </div>
-          <div class="card" style="margin-bottom: 1rem">
+          <div class="card">
             <img src="utilities/ark.jpg" alt="Logo HubSpot" />
-            <title>Placeholder</title>
-            <rect width="100%" height="100%" fill="#868e96"></rect><text x="50%" y="50%" fill="#dee2e6"
-              dy=".3em"></text>
-            </svg>
             <div class="body">
               <p class="text">à partir de 4,49 Euro / mois</p>
             </div>
@@ -66,18 +92,18 @@
         </div>
 
         <div class="VLayout Flexible container4">
-          <div class="HLayout Flexible" style="justify-content: center;">
+          <div class="HLayout Flexible">
             <h1>Tout inclus </h1>
           </div>
           <div class="texte HLayout Flexible">
-            <div style="width: 33%;    padding: 0 50px;">
+            <div>
               <h4>Protection contre les DDoS</h4>
               <p>De nombreux hébergeurs dans l'environnement de jeu éteignent alors le serveur concerné. Ce n'est pas le
                 cas avec OGames ! En plusieurs étapes, les attaques (mauvais trafic) sont filtrées par le trafic de
                 données régulier (bon trafic). Cela se passe sans perte de latence (ping), de sorte que le jeu normal
                 est possible même dans des conditions d'attaque.</p>
             </div>
-            <div style="width: 33%;    padding: 0 50px;">
+            <div>
               <h4>Modèle de paiement pratique</h4>
               <p>OGames propose un modèle d'abonnement pratique. Et nous faisons pratiquement des paiements
                 anticipés. Le serveur ne s'arrête pas immédiatement lorsque votre crédit est épuisé ! Cela garantit un
@@ -85,10 +111,10 @@
                 mensuelle, mais vous pouvez également vous inscrire pour des périodes plus longues avec une réduction.
                 Un changement de tarif immédiat permet d'adapter immédiatement votre tarif.</p>
             </div>
-            <div style="width: 33%;    padding: 0 50px;">
+            <div>
               <h4>Changement de jeu en quelques secondes</h4>
               <p>Vous avez un seul tarif, un montant mensuel fixe, et vous pouvez créer et démarrer des serveurs pour
-                tous nos jeux et mods (plus de 120 jeux au total). Vous jouez à Minecraft et les autres joueurs vous
+                tous nos jeux et mods (plus d'1 jeux au total). Vous jouez à Minecraft et les autres joueurs vous
                 font remarquer que vous préférez jouer à Ark - pas de problème, 5 minutes plus tard, vous avez
                 un serveur Ark qui fonctionne sans frais supplémentaires.
               </p>
@@ -96,11 +122,33 @@
           </div>
         </div>
   </main>
-
-
-  <footer id="FOOTER">
-    <a href="/privacy" title="Privacy Policy" fr="Confidentialité">Privacy Policy</a>
-    <a href="/terms" title="Terms of Service" fr="Conditions">Terms of Service</a>
+  <footer class="footer VLayout">
+    <div class="HLayout">
+      <div>
+        <a href="">OGames</a>
+      </div>
+      <div class="VLayout">
+        <a href="#produit">Produits</a>
+        <a href="minecraft.html">Minecraft</a>
+        <a href="ark.html">Ark: Survival Evolved</a>
+        <div>
+          
+        </div>
+      </div>
+      <div>
+        <a href="">Entreprise</a>
+      </div>
+      <div>
+        <a href="">Technique</a>
+      </div>
+      <div>
+        <a href="">Support</a>
+      </div>
+    </div>
+    <div class="HLayout droitAuteur" >
+      <a href="Politique-de-confidentialité.html" title="Privacy Policy" fr="Confidentialité" target="_blank">Privacy Policy</a>
+      <a href="conditions-generales.html" title="Terms of Service" fr="Conditions" target="_blank">Terms of Service</a>
+    </div>
   </footer>
 
   <script src="style.js"></script>
